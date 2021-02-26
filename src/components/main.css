@@ -1,0 +1,80 @@
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav img {
+    margin: 0;
+}
+
+#header-dialog {
+    width: 35rem;
+    background-color: white;
+    position: relative;
+    left: 10%;
+    top: 5rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+#about-text {
+    background-image: url(../images/bridge.jpg);
+    background-size: 100%;
+    padding: 1rem;
+}
+
+.dialog-container {
+    margin-bottom: 2rem;
+}
+
+.dialog-box {
+    max-width: 50rem;
+    min-width: 30rem;
+    background-color: white;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.member-box {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    background-color: whitesmoke;
+    padding: 1rem;
+}
+
+.member-logo {
+    flex-shrink: 1;
+    max-width: 10rem;
+    margin-right: 1rem;
+}
+
+#education-menu {
+    display: flex;
+    color: white !important;
+    text-decoration: none;
+    margin: 0 -0.5rem;
+}
+
+#education-menu .menu-card-wrapper {
+    flex-grow: 2;
+    margin: .5rem;
+}
+
+#education-menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-card {
+    padding: 1rem;
+    height: 15rem;
+    background-size: 100%;
+}
