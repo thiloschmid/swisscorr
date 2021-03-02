@@ -33,24 +33,16 @@ const Header = ({ siteTitle, headerHeight }: HeaderProps) => (
     >
       <h4>
         <nav>
-          {/* <h1 style={{ margin: 0 }}>
-            <Link
-              to="/"
-              style={{
-                color: `white`,
-                textDecoration: `none`,
-              }}
-            >
-              {siteTitle}
-            </Link>
-          </h1> */}
+          <span id="logo"></span>
           <Link to="/">
             <img src={swisscorrLogo} width={200} />
           </Link>
-          <Link to="/about">About</Link>
-          <Link to="/members">Members & Competences</Link>
-          <Link to="/education">Education</Link>
-          <Link to="/corrosion-day">Swiss Corrosion Science Day</Link>
+          <span id="menu">
+            <Link to="/about">About</Link>
+            <Link to="/members">Members & Competences</Link>
+            <Link to="/education">Education</Link>
+            <Link to="/corrosion-day">Swiss Corrosion Science Day</Link>
+          </span>
         </nav>
       </h4>
       {headerHeight && (
