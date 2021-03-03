@@ -23,10 +23,10 @@ const SecondPage = () => (
     <h2>Organization</h2>
     <p>
       The Swiss Corrosion Network is run by all its members, with an annual
-      general assembly meeting.
+      general assembly meeting. The Swiss Corrosion Network is endorsed by SGO-SST.
     </p>
 
-    <h4>Steering committee</h4>
+    <h2>Steering committee</h2>
     <ul>
       <li>Prof. Dr. Ueli Angst, ETH Zurich</li>
       <li>

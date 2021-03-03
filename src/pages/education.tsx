@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 
 import MenuCard from "../components/menucard"
 
+import micro from "../images/microscopy.jpg"
 import tunnel from "../images/tunnel.jpg"
 
 const SecondPage = () => (
@@ -14,7 +15,7 @@ const SecondPage = () => (
     <h1>Education</h1>
     <div id="education-menu">
     <MenuCard 
-      picture={tunnel}
+      picture={micro}
       text={`University Teaching`}
       link={"/education/university-teaching"}
     />

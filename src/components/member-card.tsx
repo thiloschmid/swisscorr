@@ -19,14 +19,32 @@ const MemberCard = ({
 }: MemberCardProps) => (
   <div className="member-box">
     <div className="member-logo-container">
-    <img src={logo} className="member-logo" />
+      <a href={link}>
+        <img src={logo} className="member-logo" />
+      </a>
     </div>
     <div className="member-description">
       <h4>{institution}</h4>
+      <table>
+        <tbody>
+          <tr>
+            <th>Contact</th>
+            <td>{contact}</td>
+          </tr>
+          <tr>
+            <th>Competences</th>
+            <td>{keywords}</td>
+          </tr>
+        </tbody>
+      </table>
+      <a href={link} target="_blank">
+        {link}
+      </a>
+      {/* 
       <p>{contact}</p>
       <p>{keywords}</p>
       <p><a href={link} target="_blank">{link}</a></p>
-      <p>{comments}</p>
+      <p>{comments}</p> */}
     </div>
   </div>
 )
