@@ -2,7 +2,7 @@ import React from "react"
 
 interface DialogProps {
   title: string
-  text: string
+  text: any
 }
 
 const Dialog = ({ title, text }: DialogProps) => (

@@ -71,7 +71,7 @@ const Header = ({ siteTitle, headerHeight }: HeaderProps) => (
                   name: "Current Swiss Corrosion Science Day",
                 },
                 {
-                  path: "/education/practitioners-courses",
+                  path: "/corrosion-day/past",
                   name: "Past Swiss Corrosion Science Days",
                 },
               ]}
