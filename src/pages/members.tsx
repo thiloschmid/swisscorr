@@ -19,6 +19,7 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Members & Competences" />
     <h1>Members & Competences</h1>
+    <h3>Academic members</h3>
     <MemberCard
       institution={"ETH Zurich, Durability of Engineering Materials Lab"}
       logo={eth}
@@ -59,6 +60,8 @@ const SecondPage = () => (
       link={"https://www.psi.ch/en/lnm"}
       comments="(Academic member)"
     />
+    <hr />
+    <h3>Industry members</h3>
     <MemberCard
       institution={"Swiss Society for Corrosion Protection"}
       logo={sgk}

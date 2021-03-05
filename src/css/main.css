@@ -1,28 +1,32 @@
 @import "./dropdown.css";
 
-td, th {
+td,
+th {
   border: none;
   padding: 0.5rem;
 }
 
 table {
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 nav {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   /* justify-content: space-between; */
   align-items: center;
 }
 
 nav #logo {
-  margin-right: 5em;
+  margin-right: 5rem;
+  margin-bottom: 1rem;
 }
 
 nav a {
   color: white;
   text-decoration: none;
+  margin: 10px;
 }
 
 nav #menu {
@@ -32,8 +36,16 @@ nav #menu {
   flex-grow: 1;
 }
 
-nav #menu a:after {
-  display: block;
+nav a.navlink {
+  position: relative;
+}
+
+nav a.navlink:after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  display: inline-block;
   content: "";
   width: 100%;
   height: 0.2rem;
@@ -41,7 +53,7 @@ nav #menu a:after {
   background-color: transparent;
 }
 
-nav #menu a:hover:after {
+nav a.navlink:hover:after {
   background-color: white;
 }
 
@@ -59,8 +71,8 @@ nav img {
   font-weight: bold;
 }
 
-#news-container{
-  margin: 0 -.5rem;
+#news-container {
+  margin: 0 -0.5rem;
   display: flex;
   flex-flow: row wrap;
 }
@@ -69,14 +81,13 @@ nav img {
   flex-grow: 1;
   background-color: whitesmoke;
   padding: 1rem;
-  margin: 0 .5rem;
+  margin: 0 0.5rem;
 }
 
 #about-text {
   display: flex;
   justify-content: flex-end;
   background-image: url(../images/bridge.jpg);
-  background-size: 100%;
   padding: 2rem;
 }
 
@@ -154,4 +165,23 @@ nav img {
   padding: 1rem;
   height: 15rem;
   background-size: 100%;
+}
+
+#open-menu {
+  display: none;
+}
+
+@media (max-width: 1200px) {
+  nav #menu {
+    display: none;
+  }
+
+  #open-menu {
+    display: inline-block;
+    padding: 1rem;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
 }

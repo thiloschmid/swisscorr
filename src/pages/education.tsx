@@ -16,8 +16,8 @@ const SecondPage = () => (
     <div id="education-menu">
     <MenuCard 
       picture={micro}
-      text={`University Teaching`}
-      link={"/education/university-teaching"}
+      text={`Academic Teaching`}
+      link={"/education/academic-teaching"}
     />
     <MenuCard 
       picture={tunnel}

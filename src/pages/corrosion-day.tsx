@@ -6,8 +6,8 @@ import SEO from "../components/seo"
 
 import MenuCard from "../components/menucard"
 
-import micro from "../images/microscopy.jpg"
-import tunnel from "../images/tunnel.jpg"
+import image1 from "../images/person-holding-metal.jpg"
+import image2 from "../images/handrail.jpg"
 
 const SecondPage = () => (
   <Layout>
@@ -16,12 +16,12 @@ const SecondPage = () => (
     
     <div id="education-menu">
     <MenuCard 
-      picture={micro}
+      picture={image1}
       text={`Current Swiss Corrosion Science Day`}
       link={"/corrosion-day/current"}
     />
     <MenuCard 
-      picture={tunnel}
+      picture={image2}
       text={`Past Swiss Corrosion Science Days`}
       link={"/corrosion-day/past"}
     />

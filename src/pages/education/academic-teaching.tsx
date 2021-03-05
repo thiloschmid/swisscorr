@@ -13,8 +13,8 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Education > University" />
     <h1>{`Education > Academic Teaching`}</h1>
-    <h2>{`Educational activities offered by the academic members`}</h2>
-    <img src={eth} height={100} />
+    <p>{`Educational activities offered by the academic members.`}</p>
+    <img src={eth} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}}/>
     <CourseCard
       name={"Maintenance and durability of reinforced concrete"}
       description={
@@ -32,7 +32,7 @@ const SecondPage = () => (
       contact={"Prof. Dr. Ueli Angst"}
     />
     <hr />
-    <img src={epfl} height={100} />
+    <img src={epfl} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}} />
     <CourseCard
       name={"Corrosion and Protection"}
       description={
@@ -63,7 +63,7 @@ const SecondPage = () => (
       contact={"Dr. Stefano Mischler"}
     />
     <hr />
-    <img src={psi} height={100} />
+    <img src={psi} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}} />
 
     <p>{`PSI’s LNM is actively engaged in university-level teaching (e.g., Nuclear Engineering Master course of PSI/ETHZ/EPFL, 
       EPFL Doctoral School) etc.), education and training. We offer both, experimental and/or modelling oriented PhD & master 

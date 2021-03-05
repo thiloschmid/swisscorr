@@ -11,7 +11,16 @@ const SecondPage = () => (
   <Layout>
     <SEO title="Education > Practitioners Courses" />
     <h1>{`Education > Practitioners courses`}</h1>
-    <img src={sgk} height={100} />
+
+    <img
+      src={sgk}
+      height={60}
+      style={{
+        border: "3px solid whitesmoke",
+        marginBottom: ".5rem",
+        padding: ".3rem",
+      }}
+    />
 
     <div className="course-box">
       <div>
@@ -29,8 +38,16 @@ const SecondPage = () => (
         </ul>
       </div>
     </div>
-            <hr />
-            <img src={eth} height={100} />
+    <hr />
+    <img
+      src={eth}
+      height={60}
+      style={{
+        border: "3px solid whitesmoke",
+        marginBottom: ".5rem",
+        padding: ".3rem",
+      }}
+    />
 
     <div className="course-box">
       <div>
