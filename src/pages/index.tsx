@@ -8,7 +8,7 @@ import SEO from "../components/seo"
 import NewsCard from "../components/news-card"
 
 const IndexPage = () => (
-  <Layout headerHeight={"20rem"}>
+  <Layout landingPage={true}>
     <SEO title="Home" />
     <h1>The Swiss Corrosion Network</h1>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>

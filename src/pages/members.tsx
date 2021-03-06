@@ -89,7 +89,7 @@ const SecondPage = () => (
       keywords={
         "Organic coatings. Sacrificial anodes. Corrosion inhibitors. Sealing and bonding. Waterproofing materials."
       }
-      link={"https://www.nagra.ch"}
+      link={"www.sika.ch"}
       comments="(Industry member)"
     />
   </Layout>

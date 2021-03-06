@@ -40,11 +40,6 @@ const MemberCard = ({
       <a href={link} target="_blank">
         {link}
       </a>
-      {/* 
-      <p>{contact}</p>
-      <p>{keywords}</p>
-      <p><a href={link} target="_blank">{link}</a></p>
-      <p>{comments}</p> */}
     </div>
   </div>
 )

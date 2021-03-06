@@ -13,7 +13,7 @@ import Header from "./header"
 import "../css/layout.css"
 import "../css/main.css"
 
-const Layout = ({ children, headerHeight }: any) => {
+const Layout = ({ children, landingPage }: any) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +27,7 @@ const Layout = ({ children, headerHeight }: any) => {
   return (
     <>
       <Header
-        headerHeight={headerHeight}
+        landingPage={landingPage}
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />
       <div

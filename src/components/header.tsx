@@ -14,16 +14,16 @@ console.log(bgImage)
 
 interface HeaderProps {
   siteTitle: string
-  headerHeight?: string
+  landingPage?: boolean
 }
 
-/* Renders the header. headerHeight is only specified for the landing page,
- * where an additional dialog box is shown.
+/* Renders the header.
  */
 
-const Header = ({ siteTitle, headerHeight }: HeaderProps) => {
+const Header = ({ siteTitle, landingPage }: HeaderProps) => {
+  let [collapseNav, setCollapseNav] = useState(true)
 
-  let [collapseNav, setCollapseNav] = useState(true);
+  console.log(landingPage)
 
   return (
     <header
@@ -31,9 +31,8 @@ const Header = ({ siteTitle, headerHeight }: HeaderProps) => {
         marginBottom: `1.45rem`,
         color: "black",
         backgroundImage: `url(${bgImage})`,
-        height: headerHeight || `6rem`,
-        backgroundSize: `100%`,
-        backgroundRepeat: `no-repeat`,
+        // height: landingPage? `20rem` : `6rem`,
+        backgroundSize: `cover`,
       }}
     >
       <div
@@ -43,61 +42,60 @@ const Header = ({ siteTitle, headerHeight }: HeaderProps) => {
           padding: `1.45rem 1.0875rem`,
         }}
       >
-        <h4>
-          <nav>
-            <span id="logo">
-              <Link to="/">
-                <img src={swisscorrLogo} width={200} />
-              </Link>
-            </span>
-            <span id="menu" className={collapseNav ? "" : "open"}>
-              <Link className="navlink" to="/about">
-                About
-              </Link>
-              <Link className="navlink" to="/members">
-                Members & Competences
-              </Link>
-              <DropdownLink
-                path="/education"
-                name="Education"
-                subpaths={[
-                  {
-                    path: "/education/academic-teaching",
-                    name: "Academic Teaching",
-                  },
-                  {
-                    path: "/education/practitioners-courses",
-                    name: "Practitioners courses",
-                  },
-                ]}
-              />
-              <DropdownLink
-                path="/corrosion-day"
-                name="Swiss Corrosion Science Day"
-                subpaths={[
-                  {
-                    path: "/corrosion-day/current",
-                    name: "Current Swiss Corrosion Science Day",
-                  },
-                  {
-                    path: "/corrosion-day/past",
-                    name: "Past Swiss Corrosion Science Days",
-                  },
-                ]}
-              />
-              <Link className="navlink" to="/contact">
-                Contact
-              </Link>
-            </span>
-            <img
-              src={hamburger} 
-              id="open-menu"
-              alt="menu"
-              onClick={() => setCollapseNav(!collapseNav)}
+        <nav>
+          <span id="logo">
+            <Link to="/">
+              <img src={swisscorrLogo} width={200} />
+            </Link>
+          </span>
+          <span id="menu" className={collapseNav ? "" : "open"}>
+            <Link className="navlink" to="/about">
+              About
+            </Link>
+            <Link className="navlink" to="/members">
+              Members & Competences
+            </Link>
+            <DropdownLink
+              path="/education"
+              name="Education"
+              subpaths={[
+                {
+                  path: "/education/academic-teaching",
+                  name: "Academic Teaching",
+                },
+                {
+                  path: "/education/practitioners-courses",
+                  name: "Practitioners courses",
+                },
+              ]}
             />
-          </nav>
-        </h4>
-        {headerHeight && (
+            <DropdownLink
+              path="/corrosion-day"
+              name="Swiss Corrosion Science Day"
+              subpaths={[
+                {
+                  path: "/corrosion-day/current",
+                  name: "Current Swiss Corrosion Science Day",
+                },
+                {
+                  path: "/corrosion-day/past",
+                  name: "Past Swiss Corrosion Science Days",
+                },
+              ]}
+            />
+            <Link className="navlink" to="/contact">
+              Contact
+            </Link>
+          </span>
+          <input
+            type="image"
+            src={hamburger}
+            id="open-menu"
+            alt="menu"
+            onClick={() => setCollapseNav(!collapseNav)}
+          />
+        </nav>
+        {landingPage && (
           <div id="header-dialog">
             Welcome to the website of the Swiss Corrosion Network - a
             partnership of Swiss industrial and scientific institutions working
