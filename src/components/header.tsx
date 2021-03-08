@@ -10,8 +10,6 @@ import swisscorrLogo from "../logos/swisscorr.svg"
 
 import hamburger from "../images/hamburger.svg"
 
-console.log(bgImage)
-
 interface HeaderProps {
   siteTitle: string
   landingPage?: boolean
@@ -22,8 +20,6 @@ interface HeaderProps {
 
 const Header = ({ siteTitle, landingPage }: HeaderProps) => {
   let [collapseNav, setCollapseNav] = useState(true)
-
-  console.log(landingPage)
 
   return (
     <header
