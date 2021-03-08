@@ -4,17 +4,19 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CourseCard from "../../components/course-card"
+import InstituteTitle from "../../components/institute-title"
 
 import eth from "../../logos/eth.png"
 import epfl from "../../logos/epfl.png"
 import psi from "../../logos/psi.png"
 
-const SecondPage = () => (
+
+const Page = () => (
   <Layout>
-    <SEO title="Education > University" />
-    <h1>{`Education > Academic Teaching`}</h1>
+    <SEO title="Education, Academic" />
+    <h1>{[<Link className="no-decoration" to="/education">Education</Link>, ` > Academic Teaching`]}</h1>
     <p>{`Educational activities offered by the academic members.`}</p>
-    <img src={eth} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}}/>
+    <InstituteTitle logo={eth} title="ETH Zurich" />
     <CourseCard
       name={"Maintenance and durability of reinforced concrete"}
       description={
@@ -32,7 +34,7 @@ const SecondPage = () => (
       contact={"Prof. Dr. Ueli Angst"}
     />
     <hr />
-    <img src={epfl} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}} />
+    <InstituteTitle logo={epfl} title="EPFL" />
     <CourseCard
       name={"Corrosion and Protection"}
       description={
@@ -63,7 +65,7 @@ const SecondPage = () => (
       contact={"Dr. Stefano Mischler"}
     />
     <hr />
-    <img src={psi} height={60} style={{ border: "3px solid whitesmoke", marginBottom: ".5rem", padding: ".3rem"}} />
+    <InstituteTitle logo={psi} title="PSI" />
 
     <p>{`PSI’s LNM is actively engaged in university-level teaching (e.g., Nuclear Engineering Master course of PSI/ETHZ/EPFL, 
       EPFL Doctoral School) etc.), education and training. We offer both, experimental and/or modelling oriented PhD & master 
@@ -72,4 +74,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default Page

@@ -6,21 +6,14 @@ import SEO from "../../components/seo"
 
 import eth from "../../logos/eth.png"
 import sgk from "../../logos/sgk.png"
+import InstituteTitle from "../../components/institute-title"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Education > Practitioners Courses" />
-    <h1>{`Education > Practitioners courses`}</h1>
+    <SEO title="Education, Practitioners Courses" />
+    <h1>{[<Link className="no-decoration" to="/education">Education</Link>, ` > Practitioners courses`]}</h1>
 
-    <img
-      src={sgk}
-      height={60}
-      style={{
-        border: "3px solid whitesmoke",
-        marginBottom: ".5rem",
-        padding: ".3rem",
-      }}
-    />
+    <InstituteTitle logo={sgk} title="SGK" />
 
     <div className="course-box">
       <div>
@@ -39,15 +32,7 @@ const SecondPage = () => (
       </div>
     </div>
     <hr />
-    <img
-      src={eth}
-      height={60}
-      style={{
-        border: "3px solid whitesmoke",
-        marginBottom: ".5rem",
-        padding: ".3rem",
-      }}
-    />
+    <InstituteTitle logo={eth} title="ETH Zurich" />
 
     <div className="course-box">
       <div>
