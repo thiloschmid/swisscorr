@@ -8,7 +8,7 @@ import BackgroundImage from "gatsby-background-image"
 import DropdownLink from "./dropdown-link"
 
 // import logos and menu hamburger button
-import swisscorrLogo from "../logos/swisscorr.svg"
+import swisscorrLogo from "../images/logos/swisscorr.svg"
 import hamburger from "../images/hamburger.svg"
 
 interface HeaderProps {

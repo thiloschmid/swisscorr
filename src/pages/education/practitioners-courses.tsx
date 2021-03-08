@@ -4,11 +4,12 @@ import { Link } from "gatsby"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 
-import eth from "../../logos/eth.png"
-import sgk from "../../logos/sgk.png"
+import eth from "../../images/logos/eth.png"
+import sgk from "../../images/logos/sgk.png"
+
 import InstituteTitle from "../../components/institute-title"
 
-const SecondPage = () => (
+const PractitionersCourses = () => (
   <Layout>
     <SEO title="Education, Practitioners Courses" />
     <h1>{[<Link className="no-decoration" to="/education">Education</Link>, ` > Practitioners courses`]}</h1>
@@ -47,4 +48,4 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export default PractitionersCourses

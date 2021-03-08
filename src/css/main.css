@@ -189,15 +189,15 @@ nav img {
   align-items: center;
 }
 
-.institute-title h3 {
+.institute-title h2, .institute-title h3 {
   margin-bottom: 0;
 }
 
 .institute-logo {
-  border: "3px solid whitesmoke";
-  padding: ".3rem";
+  border: 2px solid whitesmoke;
+  padding: .3rem;
   margin-bottom: 0;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .menu-card {

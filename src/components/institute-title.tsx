@@ -6,9 +6,10 @@ const InstituteTitle = ({ logo, title }: any) => (
       className="institute-logo"
       src={logo}
       alt={`logo ${title}`}
-      height={60}
+      width={150}
+
     />
-    <h3>{title}</h3>
+    <h2>{title}</h2>
   </div>
 )
 

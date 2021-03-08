@@ -7,13 +7,13 @@ import SEO from "../components/seo"
 import MemberCard from "../components/member-card"
 
 // import logos
-import eth from "../logos/eth.png"
-import epfl from "../logos/epfl.png"
-import empa from "../logos/empa.png"
-import psi from "../logos/psi.png"
-import sgk from "../logos/sgk.png"
-import nagra from "../logos/nagra.png"
-import sika from "../logos/sika.png"
+import eth from "../images/logos/eth.png"
+import epfl from "../images/logos/epfl.png"
+import empa from "../images/logos/empa.png"
+import psi from "../images/logos/psi.png"
+import sgk from "../images/logos/sgk.png"
+import nagra from "../images/logos/nagra.png"
+import sika from "../images/logos/sika.png"
 
 const SecondPage = () => (
   <Layout>
