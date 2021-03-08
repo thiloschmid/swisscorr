@@ -184,18 +184,20 @@ nav img {
 }
 
 .institute-title {
-  margin-bottom: .4rem;
+  margin-bottom: 0.4rem;
   display: flex;
   align-items: center;
 }
 
-.institute-title img {
-  margin-bottom: 0;
-  margin-right: .5rem;
-}
-
 .institute-title h3 {
   margin-bottom: 0;
+}
+
+.institute-logo {
+  border: "3px solid whitesmoke";
+  padding: ".3rem";
+  margin-bottom: 0;
+  margin-right: 0.5rem;
 }
 
 .menu-card {
