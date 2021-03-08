@@ -1,21 +1,23 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
+
+import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-
 import Dialog from "../components/dialog"
 
-import bridge from "../images/bridge.jpg"
+// import bridge from "../images/bridge.jpg"
 
-const SecondPage = () => (
+const About = ({ data }: any) => (
   <Layout>
     <SEO title="About" />
     <h1>About</h1>
-    <div
+    <BackgroundImage
+      Tag="div"
       className="dialog-container"
-      style={{ backgroundImage: `url(${bridge})` }}
       id="about-dialog"
+      fluid={data.bridge.childImageSharp.fluid}
     >
       <Dialog
         title={"Mission"}
@@ -29,7 +31,7 @@ const SecondPage = () => (
           ".",
         ]}
       />
-    </div>
+    </BackgroundImage>
     <h2>Organization</h2>
     <p>
       The Swiss Corrosion Network is run by all its members, with an annual
@@ -50,4 +52,16 @@ const SecondPage = () => (
   </Layout>
 )
 
-export default SecondPage
+export const query = graphql`
+  {
+    bridge: file(relativePath: { eq: "bridge.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
+export default About

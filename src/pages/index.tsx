@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Image from "../components/image"
@@ -12,7 +13,7 @@ const IndexPage = () => (
     <SEO title="Home" />
     <h1>The Swiss Corrosion Network</h1>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      <StaticImage src="../images/slideshow/Background12.png" alt="background" />
     </div>
 
     <h2>News</h2>

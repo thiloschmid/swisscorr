@@ -1,31 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MenuCard from "../components/menucard"
 
-import micro from "../images/microscopy.jpg"
-import tunnel from "../images/tunnel.jpg"
+const Education = ({ data }: any) => {
+  console.log(data)
 
-const SecondPage = () => (
-  <Layout>
-    <SEO title="Education" />
-    <h1>Education</h1>
-    <div id="education-menu">
-    <MenuCard 
-      picture={micro}
-      text={`Academic Teaching`}
-      link={"/education/academic-teaching"}
-    />
-    <MenuCard 
-      picture={tunnel}
-      text={`Practitioners courses`}
-      link={"/education/practitioners-courses"}
-    />
-    </div>
-  </Layout>
-)
+  return (
+    <Layout>
+      <SEO title="Education" />
+      <h1>Education</h1>
+      <div id="education-menu">
+        <MenuCard
+          picture={data.microscopy.childImageSharp.fluid}
+          text={`Academic Teaching`}
+          link={"/education/academic-teaching"}
+        />
+        <MenuCard
+          picture={data.tunnel.childImageSharp.fluid}
+          text={`Practitioners courses`}
+          link={"/education/practitioners-courses"}
+        />
+      </div>
+    </Layout>
+  )
+}
 
-export default SecondPage
+export const query = graphql`
+  {
+    microscopy: file(relativePath: { eq: "microscopy.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    tunnel: file(relativePath: { eq: "tunnel.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
+export default Education

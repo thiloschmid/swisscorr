@@ -1,25 +1,37 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import Dialog from "../components/dialog"
+import BackgroundImage from "gatsby-background-image"
 
-import reinforcement from "../images/reinforcement.jpg"
-
-const SecondPage = () => (
+const Contact = ({ data }: any) => (
   <Layout>
-    <SEO title="About" />
+    <SEO title="Contact" />
     <h1>Contact</h1>
-    <div
+    <BackgroundImage
+      Tag="div"
       className="dialog-container"
-      style={{ backgroundImage: `url(${reinforcement})` }}
       id="contact-dialog"
+      fluid={data.bridge.childImageSharp.fluid}
     >
       <Dialog title={"Write us an email"} text={`example@swisscorr.ch`} />
-    </div>
+    </BackgroundImage>
   </Layout>
 )
 
-export default SecondPage
+export const query = graphql`
+  {
+    bridge: file(relativePath: { eq: "reinforcement.jpg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 1920) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+  }
+`
+
+export default Contact

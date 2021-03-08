@@ -4,6 +4,10 @@ body {
   min-width: 360px;
 }
 
+header {
+  background-color: black;
+}
+
 td,
 th {
   border: none;
@@ -160,7 +164,7 @@ nav img {
 }
 
 .member-description {
-  flex-basis: 70vw;
+  flex-basis: 60vw;
 }
 
 #education-menu {
@@ -184,6 +188,7 @@ nav img {
   padding: 1rem;
   height: 15rem;
   background-size: cover;
+  background-color: black;
 }
 
 #open-menu {
