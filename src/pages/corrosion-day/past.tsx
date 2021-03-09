@@ -15,12 +15,14 @@ const PastCorrosionDay = () => (
   <Layout>
     <SEO title="Past Swiss Corrosion Science Days" />
     <h1>Past Swiss Corrosion Science Days</h1>
-    <div id="flyer-container">
+    <p>You can download the flyers of past corrosion science events below.</p>
+    <div id="past-flyers-container">
       <CDFlyer
         title={"Swiss Corrosion Day 2020"}
-        pdf={
+        picture={
           <StaticImage
-            src="../../images/flyers/swiss_corrosion_day_2020.pdf"
+            className="flyer-image-container"
+            src="../../images/flyers/swiss_corrosion_day_2020_page_1.png"
             alt="flyer corrosion day 2020"
           />
         }
@@ -28,9 +30,10 @@ const PastCorrosionDay = () => (
       />
       <CDFlyer
         title={"Swiss Corrosion Day 2017"}
-        pdf={
+        picture={
           <StaticImage
-            src="../../images/flyers/swiss_corrosion_day_2017.pdf"
+            className="flyer-image-container"
+            src="../../images/flyers/swiss_corrosion_day_2017_page_1.png"
             alt="flyer corrosion day 2017"
           />
         }
@@ -38,9 +41,10 @@ const PastCorrosionDay = () => (
       />
       <CDFlyer
         title={"Swiss Corrosion Day 2017 Programme"}
-        pdf={
+        picture={
           <StaticImage
-            src="../../images/flyers/swiss_corrosion_day_2017_programm.pdf"
+            className="flyer-image-container"
+            src="../../images/flyers/swiss_corrosion_day_2017_programm_page_1.png"
             alt="swiss corrosion day 2017 programm"
           />
         }
@@ -48,9 +52,10 @@ const PastCorrosionDay = () => (
       />
       <CDFlyer
         title={"Swiss Corrosion Seminar 2015"}
-        pdf={
+        picture={
           <StaticImage
-            src="../../images/flyers/swiss_corrosion_seminar_2015.pdf"
+            className="flyer-image-container"
+            src="../../images/flyers/swiss_corrosion_seminar_2015_page_1.png"
             alt="flyer corrosion seminar 2015"
           />
         }
