@@ -256,7 +256,7 @@ nav img {
   background-color: whitesmoke;
   margin: .5rem;
   padding: 1rem;
-  /* min-width: 300px; */
+  min-width: 300px;
 }
 
 .flyer-image-overlay {

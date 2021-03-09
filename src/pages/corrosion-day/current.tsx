@@ -16,7 +16,7 @@ const CurrentCorrosionDay = () => (
       />
     </div>
 
-    <h2>More information soon to follow!</h2>
+    <h2>More information is soon to follow!</h2>
   </Layout>
 )
 
