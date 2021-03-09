@@ -49,6 +49,7 @@ nav #menu {
   align-items: center;
   flex-grow: 1;
   min-width: 860px;
+  text-shadow: 2px 2px black;
 }
 
 nav a.navlink {
@@ -57,19 +58,25 @@ nav a.navlink {
 
 nav a.navlink:after {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 0.2rem;
+  left: 50%;
   right: 0;
   display: inline-block;
   content: "";
-  width: 100%;
+  width: 0;
   height: 0.2rem;
-  margin-top: 0.2rem;
   background-color: transparent;
+  /* background-color: white; */
+  border: 1px solid transparent;
+  transition-property: width, left;
+  transition-duration: .3s;
 }
 
 nav a.navlink:hover:after {
+  width: 100%;
+  left: 0;
   background-color: white;
+  border-color: rgb(121, 121, 121);
 }
 
 nav img {
@@ -164,6 +171,7 @@ nav img {
 
 .member-description {
   flex-basis: 60vw;
+  flex-grow: 1;
 }
 
 #education-menu {
@@ -205,6 +213,7 @@ nav img {
   height: 15rem;
   background-size: cover;
   background-color: black;
+  text-shadow: -1px -1px 0 rgb(121, 121, 121), 1px -1px 0 rgb(121, 121, 121), -1px 1px 0 rgb(121, 121, 121), 1px 1px 0 rgb(121, 121, 121);;
 }
 
 #open-menu {
@@ -217,12 +226,16 @@ nav img {
 @media (max-width: 900px) {
   nav #menu {
     display: none;
+    text-shadow: none;
   }
 
   #open-menu {
-    display: inline-block;
+    display: block;
     padding: 1rem;
+    transition: transform .5s;
   }
+
+  #open-menu.open { transform: rotate(180deg); }
 
   nav {
     justify-content: space-between;
@@ -239,4 +252,5 @@ nav img {
   #header-dialog {
     border: 1px solid grey;
   }
+
 }

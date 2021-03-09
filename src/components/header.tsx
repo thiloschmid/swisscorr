@@ -97,6 +97,7 @@ const Header = ({ landingPage }: HeaderProps) => {
             </Link>
           </span>
           <input
+            className={collapseNav ? "open" : ""}
             type="image"
             src={hamburger}
             id="open-menu"
