@@ -44,7 +44,7 @@ const Layout = ({ children, landingPage }: any) => {
             marginTop: `2rem`,
           }}
         >
-          © {new Date().getFullYear()}
+          {/* © {new Date().getFullYear()} */}
         </footer>
       </div>
     </>

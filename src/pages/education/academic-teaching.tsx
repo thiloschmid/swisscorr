@@ -14,7 +14,7 @@ const AcademicTeaching = ({ data }: any) => {
 
   return (
     <Layout>
-      <SEO title="Education, Academic" />
+      <SEO title="Education, Academic Teaching" />
       <h1>
         {[
           <Link className="no-decoration" to="/education">
@@ -34,6 +34,8 @@ const AcademicTeaching = ({ data }: any) => {
           "Corrosion fundamentals, corrosion of steel in concrete, non-destructive testing, corrosion inspection, service life modeling, repair, corrosion prevention, corrosion protection"
         }
         contact={"Prof. Dr. Ueli Angst"}
+        link={"https://ifb.ethz.ch/education/msc-courses/msc-durability-maintenance-concrete.html"}
+        linkText={"More information"}
       />
       <CourseCard
         name={"Educational videos on corrosion"}

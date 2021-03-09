@@ -223,6 +223,17 @@ nav img {
   display: none;
 }
 
+#flyer-container {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.flyer-box {
+  flex-basis: 40%;
+  flex-grow: 1;
+  min-width: 300px;
+}
+
 @media (max-width: 900px) {
   nav #menu {
     display: none;

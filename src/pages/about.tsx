@@ -34,9 +34,12 @@ const About = ({ data }: any) => (
     </BackgroundImage>
     <h2>Organization</h2>
     <p>
-      The Swiss Corrosion Network is run by all its members, with an annual
-      general assembly meeting. The Swiss Corrosion Network is endorsed by
-      SGO-SST.
+      {[
+        `The Swiss Corrosion Network is run by all its members, with an annual
+      general assembly meeting. The Swiss Corrosion Network is endorsed by `,
+        <a href="https://www.sgo-sst.ch/home-de.html">SGO-SST</a>,
+        `.`,
+      ]}
     </p>
 
     <h2>Steering committee</h2>

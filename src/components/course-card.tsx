@@ -6,6 +6,7 @@ interface CourseCardProps {
   keywords?: string
   contact: string
   link?: string
+  linkText?: string
 }
 
 const CourseCard = ({
@@ -14,6 +15,7 @@ const CourseCard = ({
   keywords,
   contact,
   link,
+  linkText
 }: CourseCardProps) => (
   <div className="course-box">
     <div>
@@ -23,7 +25,7 @@ const CourseCard = ({
       {keywords && <p>{keywords}</p>}
       {link && (
         <p>
-          <a href={link}>Link</a>
+          <a href={link}>{linkText || "Link"}</a>
         </p>
       )}
     </div>

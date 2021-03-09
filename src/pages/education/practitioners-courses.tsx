@@ -14,7 +14,7 @@ const PractitionersCourses = () => (
     <SEO title="Education, Practitioners Courses" />
     <h1>{[<Link className="no-decoration" to="/education">Education</Link>, ` > Practitioners courses`]}</h1>
 
-    <InstituteTitle logo={sgk} title="SGK" />
+    <InstituteTitle logo={sgk} title="Swiss Society for Corrosion Protection" link="https://www.sgk.ch"/>
 
     <div className="course-box">
       <div>
@@ -30,10 +30,11 @@ const PractitionersCourses = () => (
           <li>Buried and immersed metal structures: Levels 1-4</li>
           <li>Reinforced concrete structures: Levels 1-3</li>
         </ul>
+        <a href="https://www.sgk.ch">https://www.sgk.ch</a>
       </div>
     </div>
     <hr />
-    <InstituteTitle logo={eth} title="ETH Zurich" />
+    <InstituteTitle logo={eth} title="ETH Zurich" link="https://ifb.ethz.ch/durability" />
 
     <div className="course-box">
       <div>
@@ -43,6 +44,8 @@ const PractitionersCourses = () => (
           {`Certification course «potential measurements for reinforced concrete» for personnel certification according to the Swiss standard SIA 2006:2013. 2 day course with theory and practical sessions.`}
         </p>
         <p>{`Prof. Dr. Ueli Angst`}</p>
+        <a href="https://ifb.ethz.ch/durability">https://ifb.ethz.ch/durability 
+</a>
       </div>
     </div>
   </Layout>
