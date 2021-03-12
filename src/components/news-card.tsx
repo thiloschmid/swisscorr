@@ -4,7 +4,7 @@ import React from "react"
 interface NewsCardProps {
   title: string
   date: string
-  description: string
+  description: any
 }
 
 const NewsCard = ({ title, date, description }: NewsCardProps) => (

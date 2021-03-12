@@ -6,10 +6,11 @@ import BackgroundImage from "gatsby-background-image"
 interface MenuCardProps {
   picture: any
   text: string
+  subtext?: string
   link: string
 }
 
-const MenuCard = ({ picture, text, link }: MenuCardProps) => (
+const MenuCard = ({ picture, text, subtext, link }: MenuCardProps) => (
   <div className="menu-card-wrapper">
     <Link to={link}>
       <BackgroundImage
@@ -19,6 +20,7 @@ const MenuCard = ({ picture, text, link }: MenuCardProps) => (
         fluid={picture}
       >
         <h2>{text}</h2>
+        {subtext && <h4>{subtext}</h4>}
       </BackgroundImage>
     </Link>
   </div>
