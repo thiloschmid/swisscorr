@@ -15,7 +15,8 @@ const SecondPage = ({ data } : any) => (
     <div id="education-menu">
     <MenuCard 
       picture={data.person.childImageSharp.fluid}
-      text={`Current Swiss Corrosion Science Day`}
+      text={`Swiss Corrosion Science Day 2021`}
+      subtext={`April 26, Zofingen`}
       link={"/corrosion-day/current"}
     />
     <MenuCard 

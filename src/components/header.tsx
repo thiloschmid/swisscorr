@@ -84,7 +84,7 @@ const Header = ({ landingPage }: HeaderProps) => {
               subpaths={[
                 {
                   path: "/corrosion-day/current",
-                  name: "Current Swiss Corrosion Science Day",
+                  name: "Swiss Corrosion Science Day 2021",
                 },
                 {
                   path: "/corrosion-day/past",

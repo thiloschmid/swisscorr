@@ -16,7 +16,7 @@ const PastCorrosionDay = () => (
     <SEO title="Past Swiss Corrosion Science Days" />
     <h1>Past Swiss Corrosion Science Days</h1>
     <p>You can download the flyers of past corrosion science events below.</p>
-    <div id="past-flyers-container">
+    <div className="document-container">
       <CDFlyer
         title={"Swiss Corrosion Day 2020"}
         picture={
@@ -40,7 +40,7 @@ const PastCorrosionDay = () => (
         download={corrosionDay2017}
       />
       <CDFlyer
-        title={"Swiss Corrosion Day 2017 Programme"}
+        title={"Swiss Corrosion Day 2017 Program"}
         picture={
           <StaticImage
             className="flyer-image-container"
