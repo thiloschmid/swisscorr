@@ -6,15 +6,28 @@ import SEO from "../../components/seo"
 
 import eth from "../../images/logos/eth.png"
 import sgk from "../../images/logos/sgk.png"
+import empa from "../../images/logos/empa.png"
 
 import InstituteTitle from "../../components/institute-title"
 
 const PractitionersCourses = () => (
   <Layout>
     <SEO title="Education, Practitioners Courses" />
-    <h1>{[<Link className="no-decoration" to="/education">Education</Link>, ` > Practitioners courses`]}</h1>
+    <h1>
+      {[
+        <Link className="no-decoration" to="/education">
+          Education
+        </Link>,
+        ` > Practitioners courses`,
+      ]}
+    </h1>
 
-    <InstituteTitle logo={sgk} title="Swiss Society for Corrosion Protection" link="https://www.sgk.ch"/>
+    {/* 1. SGK course */}
+    <InstituteTitle
+      logo={sgk}
+      title="Swiss Society for Corrosion Protection"
+      link="https://www.sgk.ch"
+    />
 
     <div className="course-box">
       <div>
@@ -34,7 +47,13 @@ const PractitionersCourses = () => (
       </div>
     </div>
     <hr />
-    <InstituteTitle logo={eth} title="ETH Zurich" link="https://ifb.ethz.ch/durability" />
+
+    {/* 2. ETHZ course */}
+    <InstituteTitle
+      logo={eth}
+      title="ETH Zurich"
+      link="https://ifb.ethz.ch/durability"
+    />
 
     <div className="course-box">
       <div>
@@ -44,8 +63,32 @@ const PractitionersCourses = () => (
           {`Certification course «potential measurements for reinforced concrete» for personnel certification according to the Swiss standard SIA 2006:2013. 2 day course with theory and practical sessions.`}
         </p>
         <p>{`Prof. Dr. Ueli Angst`}</p>
-        <a href="https://ifb.ethz.ch/durability">https://ifb.ethz.ch/durability 
-</a>
+        <a href="https://ifb.ethz.ch/durability">
+          https://ifb.ethz.ch/durability
+        </a>
+      </div>
+    </div>
+
+
+    {/* 3. Empa course */}
+    <hr />
+    <InstituteTitle
+      logo={empa}
+      title="Empa"
+      link="http://www.empa.ch/web/empa/joining-technologies-corrosion"
+    />
+
+    <div className="course-box">
+      <div>
+        <h4>Empa/FSRM course (in German): Elektrochemische Charakterisierung und Korrosion</h4>
+
+        <p>
+          {`For more information visit the link below.`}
+        </p>
+        <p>{`Dr. Patrik Schmutz and Dr. Ulrik Hans`}</p>
+        <a href="https://events.empa.ch/Aktuelle%20Veranstaltungen/event.php?vnr=1C6-10C">
+          https://events.empa.ch/Aktuelle%20Veranstaltungen/event.php?vnr=1C6-10C
+        </a>
       </div>
     </div>
   </Layout>

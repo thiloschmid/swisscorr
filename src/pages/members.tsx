@@ -43,7 +43,7 @@ const SecondPage = () => (
     <MemberCard
       institution={"Empa, Materials Science and Technology"}
       logo={empa}
-      contact={"Dr. Patrik Schmutz – Laboratory for Joining Technologies and Corrosion, Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"}
+      contact={"Dr. Patrik Schmutz and Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"}
       keywords={
         "Surface chemistry and corrosion management. Corrosion of Infrastructure, transportation media, medical implants, micro and nanocomponents. Local electrochemical characterizations. Oxide film engineering and functionalizing."
       }

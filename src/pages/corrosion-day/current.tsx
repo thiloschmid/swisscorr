@@ -26,8 +26,7 @@ and networking session.
 Therefore, we cordially invite all scientists and
 engineers from industry and academia who are
 interested and/or confronted with corrosion
-related issues in Switzerland to join us at our
-premises in Zofingen on April 26, 2021.`}</p>
+related issues in Switzerland to join us on April 26, 2021.`}</p>
     <p>
       {[
         `The `,
