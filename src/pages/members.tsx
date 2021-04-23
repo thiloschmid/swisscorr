@@ -96,7 +96,7 @@ const SecondPage = () => (
       keywords={
         "Organic coatings. Sacrificial anodes. Corrosion inhibitors. Sealing and bonding. Waterproofing materials."
       }
-      link={"www.sika.ch"}
+      link={"https://che.sika.com/"}
       comments="(Industry member)"
     />
     <MemberCard
@@ -108,7 +108,7 @@ const SecondPage = () => (
         structures. Non-destructive testing. Potential mapping. Service life 
         modelling. Quality control of stainless steels. Corrosion protection.`
       }
-      link={"www.tfb.ch"}
+      link={"https://www.tfb.ch/"}
       comments="(Industry member)"
     />
   </Layout>
