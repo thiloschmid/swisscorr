@@ -14,6 +14,7 @@ import psi from "../images/logos/psi.png"
 import sgk from "../images/logos/sgk.png"
 import nagra from "../images/logos/nagra.png"
 import sika from "../images/logos/sika.png"
+import tfb from "../images/logos/tfb.png"
 
 const SecondPage = () => (
   <Layout>
@@ -43,7 +44,9 @@ const SecondPage = () => (
     <MemberCard
       institution={"Empa, Materials Science and Technology"}
       logo={empa}
-      contact={"Dr. Patrik Schmutz and Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"}
+      contact={
+        "Dr. Patrik Schmutz and Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"
+      }
       keywords={
         "Surface chemistry and corrosion management. Corrosion of Infrastructure, transportation media, medical implants, micro and nanocomponents. Local electrochemical characterizations. Oxide film engineering and functionalizing."
       }
@@ -51,7 +54,9 @@ const SecondPage = () => (
       comments="(Academic member)"
     />
     <MemberCard
-      institution={"Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"}
+      institution={
+        "Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"
+      }
       logo={psi}
       contact={"Dr. Stefan Ritter – Component Structural Integrity Group"}
       keywords={
@@ -73,7 +78,9 @@ const SecondPage = () => (
       comments="(Industry member)"
     />
     <MemberCard
-      institution={"Nagra (National Cooperative for the Disposal of Radioactive Waste)"}
+      institution={
+        "Nagra (National Cooperative for the Disposal of Radioactive Waste)"
+      }
       logo={nagra}
       contact={"Dr. Nikitas Diomidis – Section Head Materials Performance"}
       keywords={
@@ -90,6 +97,18 @@ const SecondPage = () => (
         "Organic coatings. Sacrificial anodes. Corrosion inhibitors. Sealing and bonding. Waterproofing materials."
       }
       link={"www.sika.ch"}
+      comments="(Industry member)"
+    />
+    <MemberCard
+      institution={"TFB AG"}
+      logo={tfb}
+      contact={"Dr. Yves Schiegg"}
+      keywords={
+        `Corrosion of steel in concrete. Corrosion monitoring at concrete 
+        structures. Non-destructive testing. Potential mapping. Service life 
+        modelling. Quality control of stainless steels. Corrosion protection.`
+      }
+      link={"www.tfb.ch"}
       comments="(Industry member)"
     />
   </Layout>
