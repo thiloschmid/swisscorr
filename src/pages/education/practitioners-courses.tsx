@@ -107,7 +107,7 @@ const PractitionersCourses = () => (
 
         <p>
           {[
-            "Three day course, in German, provided by",
+            "Three day course, in German, provided by ",
 
             <a href="https://www.bauundwissen.ch/" target="_blank">
               www.bauundwissen.ch
