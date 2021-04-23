@@ -1,3 +1,14 @@
+<p align="center">
+  <a href="https://www.swisscorr.netflify.app" style={background-color" dark-grey}>
+    <img alt="Swisscorr" src="src/images/logos/swisscorr-old.png" width="240"/>
+  </a>
+</p>
+<h1 align="center">
+  Swiss corrosion network
+</h1>
+
+This is the website of the swiss corrosion network 
+
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.gatsbyjs.com">
