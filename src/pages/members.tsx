@@ -58,7 +58,7 @@ const SecondPage = () => (
         "Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"
       }
       logo={psi}
-      contact={"Dr. Stefan Ritter – Component Structural Integrity Group"}
+      contact={"Stefan Ritter and Hans-Peter Seifert – Component Structural Integrity Group"}
       keywords={
         "Nuclear corrosion. Environmentally-assisted cracking. Stainless steel. Ni-base alloy. Low-alloy steel. Light water reactor."
       }
@@ -92,7 +92,7 @@ const SecondPage = () => (
     <MemberCard
       institution={"Sika Technology AG"}
       logo={sika}
-      contact={"Jörg Vogelsang"}
+      contact={"Dr. Jörg Vogelsang"}
       keywords={
         "Organic coatings. Sacrificial anodes. Corrosion inhibitors. Sealing and bonding. Waterproofing materials."
       }
