@@ -14,7 +14,12 @@ import Header from "./header"
 import "../css/layout.css"
 import "../css/main.css"
 
-const Layout = ({ children, landingPage }: any) => {
+interface LayoutProps {
+  children?: any
+  landingPage?: boolean
+}
+
+const Layout = ({ children, landingPage }: LayoutProps) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -53,7 +58,7 @@ const Layout = ({ children, landingPage }: any) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  headerHeight: PropTypes.string
+  headerHeight: PropTypes.string,
 }
 
 export default Layout

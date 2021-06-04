@@ -3,6 +3,19 @@ module.exports = {
     title: `Swisscorr`,
     description: `The Swiss corrosion network is a partnership of Swiss industrial and scientific institutions working in the field of corrosion engineering and corrosion science.`,
     author: `Thilo Schmid`,
+    keywords: [
+      "Swisscorr",
+      "Corrosion",
+      "Corrosion Science",
+      "Swiss Corrosion Science",
+      "Swiss Corrosion Science Network",
+      "Durability",
+      "Durability of Engineering Materials",
+      "Corrosion Courses",
+      "Swiss Corrosion",
+      "Corrosion Switzerland",
+      "Corrosion Science Switzerland",
+    ],
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -31,6 +44,11 @@ module.exports = {
     `gatsby-plugin-gatsby-cloud`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: ["/", "/about/"],
+      },
+    },
   ],
 }
