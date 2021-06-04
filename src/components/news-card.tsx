@@ -1,6 +1,3 @@
-import React from "react"
-
-
 interface NewsCardProps {
   title: string
   date: string

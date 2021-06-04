@@ -1,5 +1,4 @@
 import { Link } from "gatsby"
-import React from "react"
 
 import BackgroundImage from "gatsby-background-image"
 

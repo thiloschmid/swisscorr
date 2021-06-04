@@ -1,5 +1,3 @@
-import React from "react"
-
 interface MemberCardProps {
   institution: string
   logo: any

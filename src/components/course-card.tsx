@@ -1,5 +1,3 @@
-import React from "react"
-
 interface CourseCardProps {
   name: string
   description: string

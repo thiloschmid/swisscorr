@@ -1,5 +1,3 @@
-import React from "react"
-
 const InstituteTitle = ({ logo, title, link }: any) => (
   <div className="institute-title">
     <a href={link}>
