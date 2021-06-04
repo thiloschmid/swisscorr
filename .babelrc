@@ -1,5 +1,4 @@
 {
-  "plugins": ["@emotion/babel-plugin"],
   "presets": [
     [
       "babel-preset-gatsby",
@@ -9,6 +8,7 @@
         }
       }
     ],
-    ["@emotion/babel-preset-css-prop"]
+    ["@emotion/babel-preset-css-prop"],
+    ["@babel/preset-react", { "runtime": "automatic", "importSource": "@emotion/react" }]
   ]
 }

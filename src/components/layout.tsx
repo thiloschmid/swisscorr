@@ -39,7 +39,7 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
       <div
         css={css`
           margin: 0 auto;
-          max-width: 1400;
+          max-width: 1400px;
           padding: 0 1.0875rem 1.45rem;
         `}
       >
