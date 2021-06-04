@@ -10,7 +10,7 @@ import Dialog from "../components/dialog"
 
 const About = ({ data }: any) => (
   <Layout>
-    <SEO title="About" description="About the Swiss Corrosion Network"/>
+    <SEO title="About" description="About the Swiss Corrosion Network" />
     <h1>About</h1>
     <BackgroundImage
       Tag="div"

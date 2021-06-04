@@ -1,6 +1,6 @@
 import { graphql, Link, useStaticQuery } from "gatsby"
 import PropTypes from "prop-types"
-import { useState } from "react";
+import { useState } from "react"
 
 // faster loading of the background using the gatsby plugin
 import BackgroundImage from "gatsby-background-image"

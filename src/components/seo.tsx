@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
@@ -17,8 +17,8 @@ interface SEOProps {
   keywords?: string[]
 }
 
-
-function SEO({ description, lang, meta, title, keywords }: SEOProps) { // eslint-disable react/jsx-pascal-case
+function SEO({ description, lang, meta, title, keywords }: SEOProps) {
+  // eslint-disable react/jsx-pascal-case
   const { site } = useStaticQuery(
     graphql`
       query {

@@ -10,7 +10,6 @@ import epfl from "../../images/logos/epfl.png"
 import psi from "../../images/logos/psi.png"
 
 const AcademicTeaching = ({ data }: any) => {
-
   return (
     <Layout>
       <SEO title="Education, Academic Teaching" />
@@ -33,7 +32,9 @@ const AcademicTeaching = ({ data }: any) => {
           "Corrosion fundamentals, corrosion of steel in concrete, non-destructive testing, corrosion inspection, service life modeling, repair, corrosion prevention, corrosion protection"
         }
         contact={"Prof. Dr. Ueli Angst"}
-        link={"https://ifb.ethz.ch/education/msc-courses/msc-durability-maintenance-concrete.html"}
+        link={
+          "https://ifb.ethz.ch/education/msc-courses/msc-durability-maintenance-concrete.html"
+        }
         linkText={"More information"}
       />
       <CourseCard

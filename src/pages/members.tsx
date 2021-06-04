@@ -40,7 +40,9 @@ const SecondPage = () => (
     <MemberCard
       institution={"Empa, Materials Science and Technology"}
       logo={empa}
-      contact={"Dr. Patrik Schmutz – Laboratory for Joining Technologies and Corrosion, Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"}
+      contact={
+        "Dr. Patrik Schmutz – Laboratory for Joining Technologies and Corrosion, Dr. Ulrik Hans – Laboratory for Joining Technologies and Corrosion"
+      }
       keywords={
         "Surface chemistry and corrosion management. Corrosion of Infrastructure, transportation media, medical implants, micro and nanocomponents. Local electrochemical characterizations. Oxide film engineering and functionalizing."
       }
@@ -48,7 +50,9 @@ const SecondPage = () => (
       comments="(Academic member)"
     />
     <MemberCard
-      institution={"Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"}
+      institution={
+        "Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"
+      }
       logo={psi}
       contact={"Dr. Stefan Ritter – Component Structural Integrity Group"}
       keywords={
@@ -70,7 +74,9 @@ const SecondPage = () => (
       comments="(Industry member)"
     />
     <MemberCard
-      institution={"Nagra (National Cooperative for the Disposal of Radioactive Waste)"}
+      institution={
+        "Nagra (National Cooperative for the Disposal of Radioactive Waste)"
+      }
       logo={nagra}
       contact={"Dr. Nikitas Diomidis – Section Head Materials Performance"}
       keywords={

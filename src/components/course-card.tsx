@@ -13,7 +13,7 @@ const CourseCard = ({
   keywords,
   contact,
   link,
-  linkText
+  linkText,
 }: CourseCardProps) => (
   <div className="course-box">
     <div>

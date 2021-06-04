@@ -8,7 +8,9 @@ interface DropdownLinkProps {
 
 const DropdownLink = ({ path, name, subpaths }: DropdownLinkProps) => (
   <div className="dropdown">
-    <Link className="navlink" to={path}>{name}</Link>
+    <Link className="navlink" to={path}>
+      {name}
+    </Link>
     <div className="dropdown-content">
       {subpaths.map(subpath => (
         <span className="dropdown-item" key={subpath.name}>
