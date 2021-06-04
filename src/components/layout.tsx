@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import { css } from "@emotion/react"
 
 import Header from "./header"
 
@@ -37,20 +37,20 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
         siteTitle={data.site.siteMetadata?.title || `Title`}
       />
       <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 1400,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
+        css={css`
+          margin: 0 auto;
+          max-width: 1400;
+          padding: 0 1.0875rem 1.45rem;
+        `}
       >
         <main>{children}</main>
-        <footer
+        {/* <footer
           style={{
             marginTop: `2rem`,
           }}
         >
-          {/* © {new Date().getFullYear()} */}
-        </footer>
+          © {new Date().getFullYear()}
+        </footer> */}
       </div>
     </>
   )
@@ -58,7 +58,7 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  headerHeight: PropTypes.string,
+  landingPage: PropTypes.bool,
 }
 
 export default Layout
