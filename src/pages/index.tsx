@@ -7,7 +7,7 @@ import News from "../components/news"
 
 const IndexPage = () => (
   <Layout landingPage={true}>
-    <SEO title="" />
+    <SEO />
     <h1>The Swiss Corrosion Network</h1>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <StaticImage

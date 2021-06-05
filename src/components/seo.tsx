@@ -13,7 +13,7 @@ interface SEOProps {
   description?: string
   lang?: string
   meta?: any
-  title: string
+  title?: string 
   keywords?: string[]
 }
 
@@ -45,7 +45,7 @@ function SEO({ description, lang, meta, title, keywords }: SEOProps) {
       htmlAttributes={{
         lang,
       }}
-      title={title}
+      title={title || defaultTitle}
       titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
       meta={[
         {
