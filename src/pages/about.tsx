@@ -21,11 +21,16 @@ const About = ({ data }: any) => (
       <Dialog
         title={"Mission"}
         text={[
-          `The Swiss Corrosion Network ties together partners from industry and scientific institutions to foster collaboration, knowledge exchange and synergies. We are committed to corrosion education and courses. A particular goal is to support and promote young corrosion scientists and corrosion engineers.
-      
-      Our members bring together expertise in corrosion science and technology from a broad range of sectors, including civil engineering and construction, subsurface engineering, nuclear engineering and radioactive waste storage, oil and gas, biomedical, geothermal energy, additive manufacturing,  [to be completed]
-      
-      An annual national conference is organized, see `,
+          `The Swiss Corrosion Network ties together partners from industry 
+          and scientific institutions to foster collaboration, knowledge 
+          exchange and synergies. We promote corrosion education and courses. 
+          A particular goal is to support and promote young corrosion 
+          scientists and corrosion engineers. Our members bring together 
+          expertise in corrosion science and technology from a broad range of 
+          sectors, including civil engineering and construction, subsurface 
+          engineering, nuclear engineering and radioactive waste storage, oil 
+          and gas, biomedical, geothermal energy, and additive manufacturing. 
+          An annual national conference is organized, see `,
           <Link to="/corrosion-day">Swiss Corrosion Science Day</Link>,
           ".",
         ]}

@@ -6,8 +6,6 @@ import SEO from "../components/seo"
 import MenuCard from "../components/menucard"
 
 const Education = ({ data }: any) => {
-  console.log(data)
-
   return (
     <Layout>
       <SEO title="Education" />

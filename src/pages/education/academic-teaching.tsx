@@ -22,7 +22,7 @@ const AcademicTeaching = ({ data }: any) => {
         ]}
       </h1>
       <p>{`Educational activities offered by the academic members.`}</p>
-      <InstituteTitle logo={eth} title="ETH Zurich" />
+      <InstituteTitle logo={eth} title="ETH Zurich"/>
       <CourseCard
         name={"Maintenance and durability of reinforced concrete"}
         description={
@@ -38,11 +38,21 @@ const AcademicTeaching = ({ data }: any) => {
         linkText={"More information"}
       />
       <CourseCard
+        name={"Surfaces, Interfaces and their Applications II"}
+        description={
+          "MSc level course in the materials science curriculum at ETH Zurich, spring semester, 3 ECTS. For more information visit the link below."
+        }
+        link={"http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=KATALOGDATEN&lerneinheitId=150228&lang=en"}
+        linkText={"More information"}
+        contact={"Dr. Patrik Schmutz"}
+      />
+      <CourseCard
         name={"Educational videos on corrosion"}
         description={
           "Free videos on corrosion science and corrosion engineering"
         }
         link={"https://www.youtube.com/channel/UCaWhMDqayWocw44fqCSKJPg"}
+        linkText={"Youtube channel"}
         contact={"Prof. Dr. Ueli Angst"}
       />
       <hr />
@@ -83,6 +93,7 @@ const AcademicTeaching = ({ data }: any) => {
       EPFL Doctoral School) etc.), education and training. We offer both, experimental and/or modelling oriented PhD & master 
       student, Post-Doc and internship positions in various fields of nuclear material science, including (nuclear) corrosion 
       (usually in collaboration with ETHZ and EPFL).`}</p>
+
     </Layout>
   )
 }
