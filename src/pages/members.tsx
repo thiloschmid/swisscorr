@@ -55,7 +55,9 @@ const SecondPage = () => (
         "Paul Scherrer Institute (PSI), Laboratory for Nuclear Materials (LNM)"
       }
       logo={psi}
-      contact={"Stefan Ritter and Hans-Peter Seifert – Component Structural Integrity Group"}
+      contact={
+        "Stefan Ritter and Hans-Peter Seifert – Component Structural Integrity Group"
+      }
       keywords={
         "Nuclear corrosion. Environmentally-assisted cracking. Stainless steel. Ni-base alloy. Low-alloy steel. Light water reactor."
       }
@@ -100,11 +102,9 @@ const SecondPage = () => (
       institution={"TFB AG"}
       logo={tfb}
       contact={"Dr. Yves Schiegg"}
-      keywords={
-        `Corrosion of steel in concrete. Corrosion monitoring at concrete 
+      keywords={`Corrosion of steel in concrete. Corrosion monitoring at concrete 
         structures. Non-destructive testing. Potential mapping. Service life 
-        modelling. Quality control of stainless steels. Corrosion protection.`
-      }
+        modelling. Quality control of stainless steels. Corrosion protection.`}
       link={"https://www.tfb.ch/"}
       comments="(Industry member)"
     />

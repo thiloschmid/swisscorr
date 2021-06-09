@@ -33,15 +33,15 @@ const CourseCard = ({
 }: CourseCardProps) => (
   <CourseContainer>
     <div>
-    <h4>{name}</h4>
-    <p>{description}</p>
-    <p>{contact}</p>
-    {keywords && <p>{keywords}</p>}
-    {link && (
-      <p>
-        <a href={link}>{linkText || "Link"}</a>
-      </p>
-    )}
+      <h4>{name}</h4>
+      <p>{description}</p>
+      <p>{contact}</p>
+      {keywords && <p>{keywords}</p>}
+      {link && (
+        <p>
+          <a href={link}>{linkText || "Link"}</a>
+        </p>
+      )}
     </div>
   </CourseContainer>
 )
