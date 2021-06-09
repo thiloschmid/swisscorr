@@ -52,6 +52,16 @@ const MemberLogo = ({ link, logo }: any) => (
 const MemberDescriptionContainer = styled.div`
   flex-basis: 70%;
   flex-grow: 1;
+
+  table {
+    margin-bottom: 0.5rem;
+  }
+
+  td,
+  th {
+    border: none;
+    padding: 0.5rem;
+  }
 `
 
 const MemberDescription = ({

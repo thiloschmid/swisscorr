@@ -1,8 +1,9 @@
+import { StaticImage } from "gatsby-plugin-image"
+
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-
 import CDFlyer from "../../components/CDFlyer"
-import { StaticImage } from "gatsby-plugin-image"
+import DocumentContainer from "../../components/document-container"
 
 // import flyers as documents
 import seminar2015 from "../../documents/swiss_corrosion_seminar_2015.pdf"
@@ -15,7 +16,7 @@ const PastCorrosionDay = () => (
     <SEO title="Past Swiss Corrosion Science Days" />
     <h1>Past Swiss Corrosion Science Days</h1>
     <p>You can download the flyers of past corrosion science events below.</p>
-    <div className="document-container">
+    <DocumentContainer>
       <CDFlyer
         title={"Swiss Corrosion Day 2020"}
         picture={
@@ -60,7 +61,7 @@ const PastCorrosionDay = () => (
         }
         download={seminar2015}
       />
-    </div>
+    </DocumentContainer>
   </Layout>
 )
 

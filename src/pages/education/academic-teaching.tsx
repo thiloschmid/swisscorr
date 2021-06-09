@@ -1,28 +1,35 @@
-import { Link, graphql } from "gatsby"
+import { Link } from "gatsby"
+import { css } from "@emotion/react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
 import CourseCard from "../../components/course-card"
 import InstituteTitle from "../../components/institute-title"
 
+// import logos
 import eth from "../../images/logos/eth.png"
 import epfl from "../../images/logos/epfl.png"
 import psi from "../../images/logos/psi.png"
 
-const AcademicTeaching = ({ data }: any) => {
+const AcademicTeaching = () => {
   return (
     <Layout>
       <SEO title="Education, Academic Teaching" />
       <h1>
         {[
-          <Link className="no-decoration" to="/education">
+          <Link
+            to="/education"
+            css={css`
+              text-decoration: none;
+            `}
+          >
             Education
           </Link>,
           ` > Academic Teaching`,
         ]}
       </h1>
       <p>{`Educational activities offered by the academic members.`}</p>
-      <InstituteTitle logo={eth} title="ETH Zurich"/>
+      <InstituteTitle logo={eth} title="ETH Zurich" />
       <CourseCard
         name={"Maintenance and durability of reinforced concrete"}
         description={
@@ -42,7 +49,9 @@ const AcademicTeaching = ({ data }: any) => {
         description={
           "MSc level course in the materials science curriculum at ETH Zurich, spring semester, 3 ECTS. For more information visit the link below."
         }
-        link={"http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=KATALOGDATEN&lerneinheitId=150228&lang=en"}
+        link={
+          "http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=KATALOGDATEN&lerneinheitId=150228&lang=en"
+        }
         linkText={"More information"}
         contact={"Dr. Patrik Schmutz"}
       />
@@ -93,7 +102,6 @@ const AcademicTeaching = ({ data }: any) => {
       EPFL Doctoral School) etc.), education and training. We offer both, experimental and/or modelling oriented PhD & master 
       student, Post-Doc and internship positions in various fields of nuclear material science, including (nuclear) corrosion 
       (usually in collaboration with ETHZ and EPFL).`}</p>
-
     </Layout>
   )
 }

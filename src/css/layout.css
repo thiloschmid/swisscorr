@@ -3,16 +3,17 @@
 html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.45em georgia, serif, sans-serif;
+  font: 112.5%/1.45em "D-DIN", Helvetica, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
 }
 body {
+  min-width: 360px;
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: "D-DIN", georgia, serif;
+  font-family: "D-DIN", Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;

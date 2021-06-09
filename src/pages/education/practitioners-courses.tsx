@@ -1,4 +1,5 @@
 import { Link } from "gatsby"
+import { css } from "@emotion/react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
@@ -15,7 +16,12 @@ const PractitionersCourses = () => (
     <SEO title="Education, Practitioners Courses" />
     <h1>
       {[
-        <Link className="no-decoration" to="/education">
+        <Link
+          to="/education"
+          css={css`
+            text-decoration: none;
+          `}
+        >
           Education
         </Link>,
         ` > Practitioners courses`,
@@ -100,8 +106,7 @@ const PractitionersCourses = () => (
     <div className="course-box">
       <div>
         <h4>
-          Von der Zustandsuntersuchung bis zur
-          Instandsetzung von Betonbauwerken
+          Von der Zustandsuntersuchung bis zur Instandsetzung von Betonbauwerken
         </h4>
 
         <p>

@@ -7,7 +7,7 @@ import BackgroundImage from "gatsby-background-image"
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
-import Menu from "./menu"
+import Menu, { NavMenuContainer } from "./menu"
 
 // import logos and menu hamburger button
 import swisscorrLogo from "../../images/logos/swisscorr.svg"
@@ -38,6 +38,18 @@ const Nav = styled.nav`
     text-decoration: none;
     padding: 0.5rem;
   }
+
+  @media (max-width: 900px) {
+    justify-content: space-between;
+
+    ${NavMenuContainer}.open {
+      display: flex;
+      flex-direction: column;
+      min-width: 80vw;
+      background: rgba(0, 0, 0, 0.4);
+      margin-bottom: 1rem;
+    }
+  }
 `
 
 const LogoWrapper = styled.span`
@@ -61,6 +73,27 @@ const HeaderDialog = styled.div`
   max-width: 35rem;
   background-color: white;
   padding: 1rem;
+
+  @media (max-width: 900px) {
+    border: 1px solid grey;
+  }
+`
+
+const Hamburger = styled.input`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: none;
+
+  @media (max-width: 900px) {
+    display: block;
+    padding: 1rem;
+    transition: transform 0.5s;
+
+    &.open {
+      transform: rotate(180deg);
+    }
+  }
 `
 
 const Header = ({ landingPage }: HeaderProps) => {
@@ -99,11 +132,10 @@ const Header = ({ landingPage }: HeaderProps) => {
         <Nav>
           <Logo />
           <Menu collapseNav={collapseNav} />
-          <input
+          <Hamburger
             className={collapseNav ? "open" : ""}
             type="image"
             src={hamburger}
-            id="open-menu"
             alt="menu"
             onClick={() => setCollapseNav(!collapseNav)}
           />

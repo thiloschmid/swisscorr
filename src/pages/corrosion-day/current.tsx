@@ -1,7 +1,7 @@
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
-
+import DocumentContainer from "../../components/document-container"
 import CDFlyer from "../../components/CDFlyer"
 
 import flyer2021 from "../../documents/scsd_2021_flyer.pdf"
@@ -13,19 +13,19 @@ const CurrentCorrosionDay = () => (
     <h1>Swiss Corrosion Science Day 2021</h1>
 
     <p>{`On the 24th April each year, Corrosion Awareness 
-    Day highlights the socio-economical challenges
-    associated with corrosion worldwide.
-Metrohm Switzerland and the Swiss
-Corrosion Network would like to celebrate
-this event for the first time this year. We aim
-to bring various corrosion groups in Switzerland 
-together as a national community for
-presentation, knowledge exchange, interaction 
-and networking session.
-Therefore, we cordially invite all scientists and
-engineers from industry and academia who are
-interested and/or confronted with corrosion
-related issues in Switzerland to join us on April 26, 2021.`}</p>
+      Day highlights the socio-economical challenges
+      associated with corrosion worldwide.
+      Metrohm Switzerland and the Swiss
+      Corrosion Network would like to celebrate
+      this event for the first time this year. We aim
+      to bring various corrosion groups in Switzerland 
+      together as a national community for
+      presentation, knowledge exchange, interaction 
+      and networking session.
+      Therefore, we cordially invite all scientists and
+      engineers from industry and academia who are
+      interested and/or confronted with corrosion
+      related issues in Switzerland to join us on April 26, 2021.`}</p>
     <p>
       {[
         `The `,
@@ -39,7 +39,7 @@ related issues in Switzerland to join us on April 26, 2021.`}</p>
         ` are available for download.`,
       ]}
     </p>
-    <div className="document-container">
+    <DocumentContainer>
       <CDFlyer
         title={"Flyer"}
         download={flyer2021}
@@ -62,7 +62,7 @@ related issues in Switzerland to join us on April 26, 2021.`}</p>
           />
         }
       />
-    </div>
+    </DocumentContainer>
   </Layout>
 )
 

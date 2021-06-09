@@ -11,6 +11,18 @@ interface MenuCardProps {
   link: string
 }
 
+export const MenuContainer = styled.div`
+  display: flex;
+  color: white !important;
+  text-decoration: none;
+  margin: 0 -0.5rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`
+
 const MenuCardContainer = styled.div`
   flex-grow: 2;
   margin: 0.5rem;

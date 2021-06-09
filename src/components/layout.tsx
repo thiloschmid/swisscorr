@@ -7,17 +7,22 @@
 
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { css } from "@emotion/react"
+import styled from "@emotion/styled"
 
 import Header from "./header/header"
 
 import "../css/layout.css"
-import "../css/main.css"
 
 interface LayoutProps {
   children?: any
   landingPage?: boolean
 }
+
+const PageContainer = styled.div`
+  margin: 0 auto;
+  max-width: 1400px;
+  padding: 0 1.0875rem 1.45rem;
+`
 
 const Layout = ({ children, landingPage }: LayoutProps) => {
   const data = useStaticQuery(graphql`
@@ -31,19 +36,13 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
   `)
 
   return (
-    // <> ... </> is a shorthand for a JSX Fragment 
-    <> 
+    // <> ... </> is a shorthand for a JSX Fragment
+    <>
       <Header
         landingPage={landingPage}
         siteTitle={data.site.siteMetadata?.title}
       />
-      <div
-        css={css`
-          margin: 0 auto;
-          max-width: 1400px;
-          padding: 0 1.0875rem 1.45rem;
-        `}
-      >
+      <PageContainer>
         <main>{children}</main>
         {/* <footer
           style={{
@@ -52,7 +51,7 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
         >
           © {new Date().getFullYear()}
         </footer> */}
-      </div>
+      </PageContainer>
     </>
   )
 }

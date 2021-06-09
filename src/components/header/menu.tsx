@@ -7,19 +7,22 @@ interface MenuProps {
   collapseNav: boolean
 }
 
-
-const MenuComponent = styled.span`
+export const NavMenuContainer = styled.span`
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   min-width: 860px;
   text-shadow: 1px 1px black;
+
+  @media (max-width: 900px) {
+    display: none;
+    text-shadow: none;
+  }
 `
 
-
 const Menu = ({ collapseNav }: MenuProps) => (
-  <MenuComponent className={collapseNav ? "" : "open"}>
+  <NavMenuContainer className={collapseNav ? "" : "open"}>
     <NavLink text="About" to="/about" />
     <NavLink text={"Members & Competences"} to="/members" />
     {/* <Link className="navlink" to="/about">
@@ -60,7 +63,7 @@ const Menu = ({ collapseNav }: MenuProps) => (
     {/* <Link className="navlink" to="/contact">
       Contact
     </Link> */}
-  </MenuComponent>
+  </NavMenuContainer>
 )
 
 export default Menu
