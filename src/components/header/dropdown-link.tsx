@@ -1,5 +1,6 @@
-import { Link } from "gatsby"
-import { css } from "@emotion/react"
+import styled from "@emotion/styled"
+
+import NavLink from "./navlink"
 
 interface DropdownLinkProps {
   path: string
@@ -7,7 +8,7 @@ interface DropdownLinkProps {
   subpaths: any[]
 }
 
-const dropdown = css`
+const Dropdown = styled.div`
   position: relative;
   display: inline-block;
   padding: 0.5rem;
@@ -19,7 +20,7 @@ const dropdown = css`
     align-items: center;
   }
 `
-const dropdownContent = css`
+const DropdownContent = styled.div`
   display: none;
   position: absolute;
   flex-flow: column nowrap;
@@ -30,8 +31,8 @@ const dropdownContent = css`
   white-space: nowrap;
 
   @media (min-width: 900px) {
-    .dropdown:hover & {
-      display: flex
+    ${Dropdown}:hover & {
+      display: flex;
     }
   }
 
@@ -41,7 +42,7 @@ const dropdownContent = css`
   }
 `
 
-const dropdownItem = css`
+const DropdownItem = styled.span`
   a {
     display: block;
   }
@@ -54,18 +55,16 @@ const dropdownItem = css`
 `
 
 const DropdownLink = ({ path, name, subpaths }: DropdownLinkProps) => (
-  <div className="dropdown" css={dropdown}>
-    <Link className="navlink" to={path}>
-      {name}
-    </Link>
-    <div css={dropdownContent}>
+  <Dropdown>
+    <NavLink text={name} to={path} />
+    <DropdownContent>
       {subpaths.map(subpath => (
-        <span className="dropdown-item" css={dropdownItem} key={subpath.name}>
-          <Link to={subpath.path}>{subpath.name}</Link>
-        </span>
+        <DropdownItem key={subpath.name}>
+          <NavLink text={subpath.name} to={subpath.path} />
+        </DropdownItem>
       ))}
-    </div>
-  </div>
+    </DropdownContent>
+  </Dropdown>
 )
 
 export default DropdownLink

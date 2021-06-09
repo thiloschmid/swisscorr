@@ -1,15 +1,25 @@
+import styled from "@emotion/styled"
+
 interface NewsCardProps {
   title: string
   date: string
   description: any
 }
 
+const NewsItem = styled.div`
+  flex-grow: 1;
+  background-color: whitesmoke;
+  padding: 1rem;
+  margin: 0.5rem;
+  flex-basis: 25rem;
+`
+
 const NewsCard = ({ title, date, description }: NewsCardProps) => (
-  <div className="news-item">
+  <NewsItem>
     <h3>{title}</h3>
     <p>{date}</p>
     <p>{description}</p>
-  </div>
+  </NewsItem>
 )
 
 export default NewsCard

@@ -9,7 +9,7 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 import { css } from "@emotion/react"
 
-import Header from "./header"
+import Header from "./header/header"
 
 import "../css/layout.css"
 import "../css/main.css"
@@ -31,10 +31,11 @@ const Layout = ({ children, landingPage }: LayoutProps) => {
   `)
 
   return (
-    <>
+    // <> ... </> is a shorthand for a JSX Fragment 
+    <> 
       <Header
         landingPage={landingPage}
-        siteTitle={data.site.siteMetadata?.title || `Title`}
+        siteTitle={data.site.siteMetadata?.title}
       />
       <div
         css={css`

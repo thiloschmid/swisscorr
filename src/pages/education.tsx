@@ -1,16 +1,29 @@
 import { graphql } from "gatsby"
+import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import MenuCard from "../components/menucard"
 
+const EducationMenu = styled.div`
+  display: flex;
+  color: white !important;
+  text-decoration: none;
+  margin: 0 -0.5rem;
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+`
+
 const Education = ({ data }: any) => {
   return (
     <Layout>
       <SEO title="Education" />
       <h1>Education</h1>
-      <div id="education-menu">
+      <EducationMenu>
         <MenuCard
           picture={data.microscopy.childImageSharp.fluid}
           text={`Academic Teaching`}
@@ -21,7 +34,7 @@ const Education = ({ data }: any) => {
           text={`Practitioners courses`}
           link={"/education/practitioners-courses"}
         />
-      </div>
+      </EducationMenu>
     </Layout>
   )
 }

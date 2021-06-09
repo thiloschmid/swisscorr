@@ -1,10 +1,10 @@
 import { Link, graphql } from "gatsby"
-
+import { css } from "@emotion/react"
 import BackgroundImage from "gatsby-background-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Dialog from "../components/dialog"
+import Dialog, { DialogContainerCSS } from "../components/dialog"
 
 // import bridge from "../images/bridge.jpg"
 
@@ -14,8 +14,11 @@ const About = ({ data }: any) => (
     <h1>About</h1>
     <BackgroundImage
       Tag="div"
-      className="dialog-container"
-      id="about-dialog"
+      css={css`
+        ${DialogContainerCSS};
+        justify-content: flex-end;
+      `}
+      // id="about-dialog"
       fluid={data.bridge.childImageSharp.fluid}
     >
       <Dialog

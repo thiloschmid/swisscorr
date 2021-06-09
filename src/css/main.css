@@ -3,7 +3,7 @@ body {
 }
 
 header {
-  background-color: black;
+  background-color: rgb(82, 82, 82);
 }
 
 a.no-decoration {
@@ -20,7 +20,7 @@ table {
   margin-bottom: 0.5rem;
 }
 
-nav {
+/* nav {
   font-weight: bold;
   font-size: larger;
   width: 100%;
@@ -28,33 +28,33 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   margin-bottom: 0.5rem;
-}
+} */
 
-nav #logo {
+/* nav #logo {
   margin-right: 5rem;
   margin-bottom: 1rem;
-}
+} */
 
-nav a {
+/* nav a {
   color: white;
   text-decoration: none;
   padding: 0.5rem;
-}
+} */
 
-nav #menu {
+/* nav #menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-grow: 1;
   min-width: 860px;
   text-shadow: 1px 1px black;
-}
+} */
 
-nav a.navlink {
+/* nav a.navlink {
   position: relative;
-}
+} */
 
-nav a.navlink:after {
+/* nav a.navlink:after {
   position: absolute;
   bottom: 0.2rem;
   left: 50%;
@@ -64,12 +64,12 @@ nav a.navlink:after {
   width: 0;
   height: 0.2rem;
   background-color: transparent;
-  /* background-color: white; */
+  /* background-color: white; 
   border: 1px solid transparent;
   transition-property: width, left;
   transition-duration: .3s;
-}
-
+} */
+/* 
 nav a.navlink:hover:after {
   width: 100%;
   left: 0;
@@ -85,60 +85,60 @@ nav img {
   max-width: 35rem;
   background-color: white;
   padding: 1rem;
-}
-
+} */
+/* 
 #news-container {
   margin: 0 -0.5rem;
   display: flex;
   flex-flow: row wrap;
-}
-
+} */
+/* 
 .news-item {
   flex-grow: 1;
   background-color: whitesmoke;
   padding: 1rem;
   margin: 0.5rem;
   flex-basis: 25rem;
-}
-
+} */
+/* 
 .dialog-container {
   display: flex;
   background-size: cover;
   padding: 2rem;
-}
-
+} */
+/* 
 #about-dialog {
   justify-content: flex-end;
-}
-
+} */
+/* 
 #contact-dialog {
   justify-content: center;
-}
-
+} */
+/* 
 .dialog-container {
-  margin-bottom: 2rem;
-}
-
+  margin-bottom: 2rem; 
+}*/
+/* 
 .dialog-box {
   max-width: 50rem;
   background-color: white;
   padding: 1rem;
-}
+} */
 
-.member-box {
+/* .member-box {
   display: flex;
   align-items: stretch;
   flex-flow: row wrap;
   background-color: whitesmoke;
   padding: 1rem;
   margin-bottom: 1rem;
-}
+} */
 
-.member-box h4,
+/* .member-box h4,
 .member-box p {
   margin-bottom: 0.7rem;
-}
-
+} */
+/* 
 .course-box {
   display: flex;
   align-items: center;
@@ -150,8 +150,8 @@ nav img {
 .course-box h4,
 .course-box p {
   margin-bottom: 0.7rem;
-}
-
+} */
+/* 
 .member-logo-container {
   display: flex;
   align-items: center;
@@ -160,35 +160,35 @@ nav img {
   margin-bottom: 1rem;
   padding: 0.5rem;
   max-width: 11rem;
-}
+} */
 
-.member-logo {
+/* .member-logo {
   flex-shrink: 1;
   flex-basis: 20%;
   margin: 0;
-}
+} */
 
-.member-description {
+/* .member-description {
   flex-basis: 70%;
   flex-grow: 1;
-}
-
+} */
+/* 
 #education-menu {
   display: flex;
   color: white !important;
   text-decoration: none;
   margin: 0 -0.5rem;
-}
-
+} */
+/* 
 #education-menu .menu-card-wrapper {
   flex-grow: 2;
   margin: 0.5rem;
-}
+} */
 
-#education-menu a {
+/* #education-menu a {
   text-decoration: none;
   color: white;
-}
+} */
 
 .institute-title {
   margin-bottom: 0.4rem;
@@ -207,13 +207,13 @@ nav img {
   margin-right: 1rem;
 }
 
-.menu-card {
+/* .menu-card {
   padding: 1rem;
   height: 15rem;
   background-size: cover;
   background-color: black;
-  text-shadow: -1px -1px 0 rgb(121, 121, 121), 1px -1px 0 rgb(121, 121, 121), -1px 1px 0 rgb(121, 121, 121), 1px 1px 0 rgb(121, 121, 121);;
-}
+  text-shadow: -1px -1px 0 rgb(121, 121, 121), 1px -1px 0 rgb(121, 121, 121), -1px 1px 0 rgb(121, 121, 121), 1px 1px 0 rgb(121, 121, 121);; 
+}*/
 
 #open-menu {
   position: absolute;

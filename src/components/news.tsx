@@ -1,11 +1,18 @@
 import { Link } from "gatsby"
+import styled from "@emotion/styled"
 
 import NewsCard from "./news-card"
+
+const NewsContainer = styled.div`
+  margin: 0 -0.5rem;
+  display: flex;
+  flex-flow: row wrap;
+`
 
 const News = () => (
   <div>
     <h2>News</h2>
-    <div id="news-container">
+    <NewsContainer>
       <NewsCard
         title={"Swiss Corrosion Science Day 2021"}
         date={"12.03.2021"}
@@ -26,7 +33,7 @@ const News = () => (
         date={"09.12.2020"}
         description={"Further description of the interesting event."}
       />
-    </div>
+    </NewsContainer>
   </div>
 )
 
