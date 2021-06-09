@@ -14,6 +14,18 @@ const News = () => (
     <h2>News</h2>
     <NewsContainer>
       <NewsCard
+        title={`Swiss Corrosion Science Day 2022 - SAVE THE DATE`}
+        date={"09.06.2021"}
+        description={[
+          `
+          The `, <i>Swiss Corrosion Science Day 2002</i>, ` will be held at ETH 
+          Zurich, Switzerland, on `,
+          <b>2 May 2022</b>,
+          `. Save the date!`, <br/>, ` More information will follow later.
+          `,
+        ]}
+      />
+      <NewsCard
         title={"Swiss Corrosion Science Day 2021"}
         date={"12.03.2021"}
         description={[
@@ -22,16 +34,6 @@ const News = () => (
           " takes place on April 26, 2021, in Zofingen AG. ",
           <Link to="/corrosion-day/current">More information</Link>,
         ]}
-      />
-      <NewsCard
-        title={"Something interesting happened"}
-        date={"09.12.2020"}
-        description={"Further description of the interesting event."}
-      />
-      <NewsCard
-        title={"Something interesting happened"}
-        date={"09.12.2020"}
-        description={"Further description of the interesting event."}
       />
     </NewsContainer>
   </div>

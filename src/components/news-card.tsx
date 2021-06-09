@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 interface NewsCardProps {
-  title: string
+  title: string | (string | JSX.Element)[]
   date: string
   description: any
 }
@@ -17,7 +17,7 @@ const NewsItem = styled.div`
 const NewsCard = ({ title, date, description }: NewsCardProps) => (
   <NewsItem>
     <h3>{title}</h3>
-    <p>{date}</p>
+    <p><i>{`published ${date}`}</i></p>
     <p>{description}</p>
   </NewsItem>
 )
