@@ -25,7 +25,7 @@ Gives the font face an extremely small block period and an infinite swap period.
 
 @font-face {
     font-family: "D-DIN";
-    src: url("../fonts/D-DIN-Bold.ttf");
+    src: url("../fonts/D-DIN-Italic.ttf");
     font-style: italic;
     font-display: swap;
 }
