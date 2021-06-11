@@ -2,7 +2,7 @@ import { graphql, Link, useStaticQuery } from "gatsby"
 import { useState } from "react"
 
 // faster loading of the background using the gatsby plugin
-import BackgroundImage from "gatsby-background-image"
+// import BackgroundImage from "gatsby-background-image"
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
