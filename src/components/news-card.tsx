@@ -31,7 +31,7 @@ const NewsCard = ({ title, date, description }: NewsCardProps) => (
     <NewsTitle>{title}</NewsTitle>
     <NewsText>{description}</NewsText>
     <NewsDate>
-      <i>{`published ${date}`}</i>
+      <i>{`${date}`}</i>
     </NewsDate>
   </NewsItem>
 )

@@ -1,20 +1,69 @@
 import { StaticImage } from "gatsby-plugin-image"
+import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
 import News from "../components/news"
 
+import SlideShowImage from "../components/slideshow-image"
+
+// import images
+
+const slideShowImages = [
+  "../images/slideshow/Background12.png",
+  "../images/slideshow/Background12.png",
+  "../images/slideshow/Background12.png",
+]
+
+const SlideShow = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0 -0.5rem;
+  margin-bottom: 1.45rem;
+`
+
 const IndexPage = () => (
   <Layout landingPage={true}>
     <SEO />
     <h1>The Swiss Corrosion Network</h1>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <StaticImage
-        src="../images/slideshow/Background12.png"
-        alt="background"
-      />
-    </div>
+    <SlideShow>
+    <SlideShowImage>
+        <StaticImage
+          src="../images/slideshow/bewaehrungsstahlkorrosion 2.jpg"
+          height={300}
+          alt="slideshow-image-1"
+        />
+      </SlideShowImage>
+      <SlideShowImage>
+        <StaticImage
+          src="../images/slideshow/Ring im Hafen.jpg"
+          height={300}
+          alt="slideshow-image-2"
+        />
+      </SlideShowImage>
+      <SlideShowImage>
+        <StaticImage
+          src="../images/slideshow/kran am hafen.jpg"
+          height={300}
+          alt="slideshow-image-3"
+        />
+      </SlideShowImage>
+      <SlideShowImage>
+        <StaticImage
+          src="../images/slideshow/Flower3.png"
+          height={300}
+          alt="slideshow-image-4"
+        />
+      </SlideShowImage>
+      <SlideShowImage>
+        <StaticImage
+          src="../images/slideshow/Background12.png"
+          height={300}
+          alt="slideshow-image-5"
+        />
+      </SlideShowImage>
+    </SlideShow>
 
     <News />
   </Layout>

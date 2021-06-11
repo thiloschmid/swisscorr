@@ -9,7 +9,7 @@ import { css } from "@emotion/react"
 import Menu, { NavMenuContainer } from "./menu"
 
 // import SwissCorr logo and menu hamburger button
-import swisscorrLogo from "../../images/logos/swisscorr_v8.svg"
+import swisscorrLogo from "../../images/logos/swisscorr_v9.svg"
 import hamburger from "../../images/hamburger.svg"
 
 interface HeaderProps {
@@ -127,8 +127,7 @@ const Header = ({ landingPage }: HeaderProps) => {
       css={css`
         background-size: cover;
         margin-bottom: 1.45rem;
-        // initial color before the background-image loads
-        background-color: #4f8d79;
+        background-color: #49ac93;
       `}
     >
       <HeaderWrapper>
