@@ -10,7 +10,7 @@ import { css } from "@emotion/react"
 import Menu, { NavMenuContainer } from "./menu"
 
 // import logos and menu hamburger button
-import swisscorrLogo from "../../images/logos/swisscorr.svg"
+import swisscorrLogo from "../../images/logos/swisscorr_v6.svg"
 import hamburger from "../../images/hamburger.svg"
 
 interface HeaderProps {
@@ -98,7 +98,7 @@ const Hamburger = styled.input`
 
 const Header = ({ landingPage }: HeaderProps) => {
   // query the background image, use WebP if possible
-  const data = useStaticQuery(
+  const {bg} = useStaticQuery(
     graphql`
       {
         bg: file(relativePath: { eq: "roof.png" }) {
