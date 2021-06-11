@@ -18,6 +18,7 @@ const AcademicTeaching = () => {
       <h1>
         {[
           <Link
+            key={"education-link"}
             to="/education"
             css={css`
               text-decoration: none;
@@ -42,7 +43,7 @@ const AcademicTeaching = () => {
         link={
           "https://ifb.ethz.ch/education/msc-courses/msc-durability-maintenance-concrete.html"
         }
-        linkText={"More information"}
+        linkText={"Course website"}
       />
       <CourseCard
         name={"Surfaces, Interfaces and their Applications II"}
@@ -52,7 +53,7 @@ const AcademicTeaching = () => {
         link={
           "http://www.vvz.ethz.ch/Vorlesungsverzeichnis/lerneinheit.view?semkez=2021S&ansicht=KATALOGDATEN&lerneinheitId=150228&lang=en"
         }
-        linkText={"More information"}
+        linkText={"Course website"}
         contact={"Dr. Patrik Schmutz"}
       />
       <CourseCard

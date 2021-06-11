@@ -1,10 +1,11 @@
 import styled from "@emotion/styled"
 
 interface CourseCardProps {
+  children?: JSX.Element[]
   name: string
-  description: string
+  description: string | (string | JSX.Element)[]
   keywords?: string
-  contact: string
+  contact?: string
   link?: string
   linkText?: string
 }
@@ -24,6 +25,7 @@ const CourseContainer = styled.div`
 `
 
 const CourseCard = ({
+  children,
   name,
   description,
   keywords,
@@ -35,13 +37,14 @@ const CourseCard = ({
     <div>
       <h4>{name}</h4>
       <p>{description}</p>
-      <p>{contact}</p>
+      {contact && <p>{contact}</p>}
       {keywords && <p>{keywords}</p>}
       {link && (
         <p>
           <a href={link}>{linkText || "Link"}</a>
         </p>
       )}
+      {children}
     </div>
   </CourseContainer>
 )

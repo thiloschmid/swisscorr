@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import { css } from "@emotion/react"
 import styled from "@emotion/styled"
 
-import BackgroundImage from "gatsby-background-image"
+import {BgImage} from "gbimage-bridge"
 
 interface MenuCardProps {
   picture: any
@@ -40,16 +40,14 @@ const MenuCardCSS = css`
 const MenuCard = ({ picture, text, subtext, link }: MenuCardProps) => (
   <MenuCardContainer>
     <Link to={link}>
-      <BackgroundImage
-        className="menu-card"
-        Tag="div"
+      <BgImage
         backgroundColor="grey"
         css={MenuCardCSS}
-        fluid={picture}
+        image={picture}
       >
         <h2>{text}</h2>
         {subtext && <h4>{subtext}</h4>}
-      </BackgroundImage>
+      </BgImage>
     </Link>
   </MenuCardContainer>
 )

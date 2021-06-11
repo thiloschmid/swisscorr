@@ -1,5 +1,5 @@
-import { graphql } from "gatsby"
-import styled from "@emotion/styled"
+import { graphql, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -7,18 +7,33 @@ import SEO from "../components/seo"
 import MenuCard, { MenuContainer } from "../components/menucard"
 
 const Education = ({ data }: any) => {
+  const { microscopy, tunnel } = useStaticQuery(graphql`
+    {
+      microscopy: file(relativePath: { eq: "microscopy.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 80, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+      tunnel: file(relativePath: { eq: "tunnel.jpg" }) {
+        childImageSharp {
+          gatsbyImageData(quality: 80, formats: [AUTO, WEBP, AVIF])
+        }
+      }
+    }
+  `)
+
   return (
     <Layout>
       <SEO title="Education" />
       <h1>Education</h1>
       <MenuContainer>
         <MenuCard
-          picture={data.microscopy.childImageSharp.fluid}
+          picture={getImage(microscopy)}
           text={`Academic Teaching`}
           link={"/education/academic-teaching"}
         />
         <MenuCard
-          picture={data.tunnel.childImageSharp.fluid}
+          picture={getImage(tunnel)}
           text={`Practitioners courses`}
           link={"/education/practitioners-courses"}
         />
@@ -26,24 +41,5 @@ const Education = ({ data }: any) => {
     </Layout>
   )
 }
-
-export const query = graphql`
-  {
-    microscopy: file(relativePath: { eq: "microscopy.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    tunnel: file(relativePath: { eq: "tunnel.jpg" }) {
-      childImageSharp {
-        fluid(quality: 90) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-  }
-`
 
 export default Education

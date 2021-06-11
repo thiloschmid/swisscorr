@@ -1,16 +1,15 @@
-import { graphql, Link, useStaticQuery } from "gatsby"
 import { useState } from "react"
-
-// faster loading of the background using the gatsby plugin
-// import BackgroundImage from "gatsby-background-image"
+import { graphql, Link, useStaticQuery } from "gatsby"
+import { getImage } from "gatsby-plugin-image"
+import { BgImage } from "gbimage-bridge" // gatsby-background-image for gatsby 3
 
 import styled from "@emotion/styled"
 import { css } from "@emotion/react"
 
 import Menu, { NavMenuContainer } from "./menu"
 
-// import logos and menu hamburger button
-import swisscorrLogo from "../../images/logos/swisscorr_v6.svg"
+// import SwissCorr logo and menu hamburger button
+import swisscorrLogo from "../../images/logos/swisscorr_v8.svg"
 import hamburger from "../../images/hamburger.svg"
 
 interface HeaderProps {
@@ -98,34 +97,38 @@ const Hamburger = styled.input`
 
 const Header = ({ landingPage }: HeaderProps) => {
   // query the background image, use WebP if possible
-  const {bg} = useStaticQuery(
+  const { bg } = useStaticQuery(
     graphql`
       {
         bg: file(relativePath: { eq: "roof.png" }) {
           childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
+            gatsbyImageData(
+              quality: 80
+              layout: FULL_WIDTH
+              formats: [AUTO, WEBP, AVIF]
+            )
           }
         }
       }
     `
   )
 
-  const imageData = data.bg.childImageSharp.fluid
+  const imageData = getImage(bg)
 
   // For smaller viewports the nav is collapsed. This hook keeps track of
   // the state of the nav.
   let [collapseNav, setCollapseNav] = useState(true)
 
   return (
-    <BackgroundImage
+    <BgImage
       Tag="header"
-      backgroundColor="black"
-      fluid={imageData}
+      image={imageData}
+      style={{ backgroundPosition: "left 15%" }}
       css={css`
         background-size: cover;
         margin-bottom: 1.45rem;
+        // initial color before the background-image loads
+        background-color: #4f8d79;
       `}
     >
       <HeaderWrapper>
@@ -148,7 +151,7 @@ const Header = ({ landingPage }: HeaderProps) => {
           </HeaderDialog>
         )}
       </HeaderWrapper>
-    </BackgroundImage>
+    </BgImage>
   )
 }
 

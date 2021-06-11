@@ -18,10 +18,14 @@ const News = () => (
         date={"09.06.2021"}
         description={[
           `
-          The `, <i>Swiss Corrosion Science Day 2022</i>, ` will be held at ETH 
+          The `,
+          <i key={"1"}>Swiss Corrosion Science Day 2022</i>,
+          ` will be held at ETH 
           Zurich, Switzerland, on `,
-          <b>2 May 2022</b>,
-          `. Save the date!`, <br/>, ` More information will follow later.
+          <b key={"2"}>2 May 2022</b>,
+          `. Save the date!`,
+          <br key={"3"} />,
+          ` More information will follow later.
           `,
         ]}
       />
@@ -30,9 +34,10 @@ const News = () => (
         date={"12.03.2021"}
         description={[
           "The ",
-          <i>Swiss Corrosion Science Day 2021</i>,
+          <Link key={"corrosion-day-link"} to="/corrosion-day/current">
+            Swiss Corrosion Science Day 2021
+          </Link>,
           " takes place on April 26, 2021, in Zofingen AG. ",
-          <Link to="/corrosion-day/current">More information</Link>,
         ]}
       />
     </NewsContainer>

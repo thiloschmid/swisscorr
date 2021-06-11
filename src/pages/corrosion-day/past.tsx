@@ -18,7 +18,7 @@ const PastCorrosionDay = () => (
     <p>You can download the flyers of past corrosion science events below.</p>
     <DocumentContainer>
       <CDFlyer
-        title={"Swiss Corrosion Day 2020"}
+        title={"Swiss Corrosion Science Day 2020"}
         picture={
           <StaticImage
             className="flyer-image-container"
@@ -29,7 +29,7 @@ const PastCorrosionDay = () => (
         download={corrosionDay2020}
       />
       <CDFlyer
-        title={"Swiss Corrosion Day 2017"}
+        title={"Swiss Corrosion Science Day 2017"}
         picture={
           <StaticImage
             className="flyer-image-container"
@@ -40,7 +40,7 @@ const PastCorrosionDay = () => (
         download={corrosionDay2017}
       />
       <CDFlyer
-        title={"Swiss Corrosion Day 2017 Program"}
+        title={"Swiss Corrosion Science Day 2017 Program"}
         picture={
           <StaticImage
             className="flyer-image-container"
@@ -51,7 +51,7 @@ const PastCorrosionDay = () => (
         download={programm2017}
       />
       <CDFlyer
-        title={"Swiss Corrosion Seminar 2015"}
+        title={"Swiss Corrosion Research Seminar 2015"}
         picture={
           <StaticImage
             className="flyer-image-container"

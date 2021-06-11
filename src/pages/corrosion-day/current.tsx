@@ -29,11 +29,11 @@ const CurrentCorrosionDay = () => (
     <p>
       {[
         `The `,
-        <a href={flyer2021} download>
+        <a key={"flyer2021"} href={flyer2021} download>
           flyer
         </a>,
         ` and `,
-        <a href={program2021} download>
+        <a key={"program2021"} href={program2021} download>
           program
         </a>,
         ` are available for download.`,

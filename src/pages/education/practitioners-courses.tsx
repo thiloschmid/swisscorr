@@ -3,13 +3,13 @@ import { css } from "@emotion/react"
 
 import Layout from "../../components/layout"
 import SEO from "../../components/seo"
+import CourseCard from "../../components/course-card"
+import InstituteTitle from "../../components/institute-title"
 
 import eth from "../../images/logos/eth.png"
 import sgk from "../../images/logos/sgk.png"
 import empa from "../../images/logos/empa.png"
 import buw from "../../images/logos/bauundwissen.png"
-
-import InstituteTitle from "../../components/institute-title"
 
 const PractitionersCourses = () => (
   <Layout>
@@ -17,6 +17,7 @@ const PractitionersCourses = () => (
     <h1>
       {[
         <Link
+          key={"education-link"}
           to="/education"
           css={css`
             text-decoration: none;
@@ -35,24 +36,19 @@ const PractitionersCourses = () => (
       link="https://www.sgk.ch"
     />
 
-    <div className="course-box">
-      <div>
-        <h4>Cathodic corrosion protection</h4>
-
-        <p>
-          {`Certification courses according to SN EN ISO 15257:2017 for personnel
-          for the planning, execution and control of cathodic corrosion
-          protection installations (Since 2008, equivalent courses in German,
-          French and English) of:`}
-        </p>
-        <ul>
-          <li>Buried and immersed metal structures: Levels 1-4</li>
-          <li>Reinforced concrete structures: Levels 1-3</li>
-        </ul>
-        <a href="https://www.sgk.ch">https://www.sgk.ch</a>
-      </div>
-    </div>
-    <hr />
+    <CourseCard
+      name={"Cathodic corrosion protection"}
+      description={`Certification courses according to SN EN ISO 15257:2017 for personnel
+        for the planning, execution and control of cathodic corrosion
+        protection installations (Since 2008, equivalent courses in German,
+        French and English) of:`}
+    >
+      <ul>
+        <li>Buried and immersed metal structures: Levels 1-4</li>
+        <li>Reinforced concrete structures: Levels 1-3</li>
+      </ul>
+      <a href="https://www.sgk.ch">https://www.sgk.ch</a>
+    </CourseCard>
 
     {/* 2. ETHZ course */}
     <InstituteTitle
@@ -61,66 +57,48 @@ const PractitionersCourses = () => (
       link="https://ifb.ethz.ch/durability"
     />
 
-    <div className="course-box">
-      <div>
-        <h4>Potential measurements for reinforced concrete</h4>
-        <p>{`Prof. Dr. Ueli Angst`}</p>
-        <p>
-          {`Certification course «potential measurements for reinforced concrete» for personnel certification according to the Swiss standard SIA 2006:2013. 2 day course with theory and practical sessions.`}
-        </p>
-        <a href="https://ifb.ethz.ch/durability">
-          https://ifb.ethz.ch/durability
-        </a>
-      </div>
-    </div>
+    <CourseCard
+      name={`Potential measurements for reinforced concrete`}
+      contact={`Prof. Dr. Ueli Angst`}
+      description={`Certification course «potential measurements for reinforced concrete» for personnel certification according to the Swiss standard SIA 2006:2013. 2 day course with theory and practical sessions.`}
+      link={"https://ifb.ethz.ch/durability"}
+      linkText={"ETH Durability of Engineering Materials Group"}
+    />
 
     {/* 3. Empa course */}
-    <hr />
     <InstituteTitle
       logo={empa}
       title="Empa"
       link="http://www.empa.ch/web/empa/joining-technologies-corrosion"
     />
 
-    <div className="course-box">
-      <div>
-        <h4>
-          Empa/FSRM course (in German): Elektrochemische Charakterisierung und
-          Korrosion
-        </h4>
-        <p>{`Dr. Patrik Schmutz and Dr. Ulrik Hans`}</p>
-        <p>{`For more information visit the link below.`}</p>
-        <a href="https://events.empa.ch/Aktuelle%20Veranstaltungen/event.php?vnr=1C6-10C">
-          https://events.empa.ch/Aktuelle%20Veranstaltungen/event.php?vnr=1C6-10C
-        </a>
-      </div>
-    </div>
+    <CourseCard
+      name={`Empa/FSRM course (in German): Elektrochemische Charakterisierung und Korrosion`}
+      contact={`Dr. Patrik Schmutz and Dr. Ulrik Hans`}
+      description={`For more information visit the link below.`}
+      link={
+        "https://events.empa.ch/Aktuelle%20Veranstaltungen/event.php?vnr=1C6-10C"
+      }
+      linkText={"Empa events"}
+    />
 
-    <hr />
     <InstituteTitle
       logo={buw}
       title="Bau und Wissen"
       link="www.bauundwissen.ch"
     />
 
-    <div className="course-box">
-      <div>
-        <h4>
-          Von der Zustandsuntersuchung bis zur Instandsetzung von Betonbauwerken
-        </h4>
+    <CourseCard
+      name={`Von der Zustandsuntersuchung bis zur Instandsetzung von Betonbauwerken`}
+      description={[
+        "Three day course, in German, provided by ",
 
-        <p>
-          {[
-            "Three day course, in German, provided by ",
-
-            <a href="https://www.bauundwissen.ch/" target="_blank">
-              www.bauundwissen.ch
-            </a>,
-            ".",
-          ]}
-        </p>
-      </div>
-    </div>
+        <a key={"buw-link"} href="https://www.bauundwissen.ch/" target="_blank">
+          www.bauundwissen.ch
+        </a>,
+        ".",
+      ]}
+    />
   </Layout>
 )
 

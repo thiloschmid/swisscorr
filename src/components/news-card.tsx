@@ -14,11 +14,25 @@ const NewsItem = styled.div`
   flex-basis: 25rem;
 `
 
+const NewsTitle = styled.h3`
+  margin-bottom: 0.75rem;
+`
+
+const NewsDate = styled.p`
+  text-align: right;
+  margin: 0;
+`
+
+const NewsText = styled.p`
+margin-bottom: 0.25rem;`
+
 const NewsCard = ({ title, date, description }: NewsCardProps) => (
   <NewsItem>
-    <h3>{title}</h3>
-    <p><i>{`published ${date}`}</i></p>
-    <p>{description}</p>
+    <NewsTitle>{title}</NewsTitle>
+    <NewsText>{description}</NewsText>
+    <NewsDate>
+      <i>{`published ${date}`}</i>
+    </NewsDate>
   </NewsItem>
 )
 
