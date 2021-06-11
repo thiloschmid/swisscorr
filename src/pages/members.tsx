@@ -15,8 +15,8 @@ import tfb from "../images/logos/tfb.png"
 
 const SecondPage = () => (
   <Layout>
-    <SEO title="Members & Competences" />
-    <h1>Members & Competences</h1>
+    <SEO title={`Members & Competences`}/>
+    <h1>{`Members & Competences`}</h1>
     <h3>Academic members</h3>
     <MemberCard
       institution={"ETH Zurich, Durability of Engineering Materials Lab"}

@@ -18,7 +18,7 @@ const News = () => (
         date={"09.06.2021"}
         description={[
           `
-          The `, <i>Swiss Corrosion Science Day 2002</i>, ` will be held at ETH 
+          The `, <i>Swiss Corrosion Science Day 2022</i>, ` will be held at ETH 
           Zurich, Switzerland, on `,
           <b>2 May 2022</b>,
           `. Save the date!`, <br/>, ` More information will follow later.

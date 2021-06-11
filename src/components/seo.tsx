@@ -1,8 +1,6 @@
 /**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
+ * Search engine optimization. Set metadata to values defined in gatsby config
+ * or provided on the corresponding page. 
  */
 
 import PropTypes from "prop-types"
@@ -34,9 +32,13 @@ function SEO({ description, lang, meta, title, keywords }: SEOProps) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
-  const defaultKeywords = keywords
+  // set description & title to the ones provided, or the one defined in gatsby-config.js
+  const helmetDescription = description || site.siteMetadata.description
+  const defaultTitle = site.siteMetadata.title
+  const helmetTitle = title || site.siteMetadata.title
+
+  // appendd provided keywords
+  const helmetKeywords = keywords
     ? keywords.concat(site.siteMetadata.keywords)
     : site.siteMetadata.keywords
 
@@ -45,12 +47,12 @@ function SEO({ description, lang, meta, title, keywords }: SEOProps) {
       htmlAttributes={{
         lang,
       }}
-      title={title || defaultTitle}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : undefined}
+      title={helmetTitle}
+      titleTemplate={title ? `${defaultTitle} | %s` : undefined}
       meta={[
         {
           name: `description`,
-          content: metaDescription,
+          content: helmetDescription,
         },
         {
           property: `og:title`,
@@ -58,11 +60,11 @@ function SEO({ description, lang, meta, title, keywords }: SEOProps) {
         },
         {
           property: `og:description`,
-          content: metaDescription,
+          content: helmetDescription,
         },
         {
           property: "keywords",
-          content: defaultKeywords,
+          content: helmetKeywords,
         },
         {
           property: `og:type`,
@@ -82,7 +84,7 @@ function SEO({ description, lang, meta, title, keywords }: SEOProps) {
         },
         {
           name: `twitter:description`,
-          content: metaDescription,
+          content: helmetDescription,
         },
 
         ...meta,
