@@ -19,7 +19,7 @@ This is the website of the swiss corrosion network [**Swisscorr**](https://swiss
     Clone the directory, install the packages, and start the development environment. 
 
     ```shell
-    git clone https://github.com/thiloschmid/swisscorr.git                                                                                   
+    git clone https://github.com/thiloschmid/swisscorr.git
     cd swisscorr
     npm install                                                                                  
     npm start
