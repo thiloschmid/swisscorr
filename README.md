@@ -1,10 +1,10 @@
 <p align="center">
-  <a href="https://www.swisscorr.netflify.app" style={background-color" dark-grey}>
+  <a href="https://www.swisscorr.ch" style={background-color" dark-grey}>
     <img alt="Swisscorr" src="src/images/logos/swisscorr-old.png" width="240"/>
   </a>
 </p>
 
-This is the website of the swiss corrosion network **Swisscorr**. It is created using [gatsby](https://www.gatsbyjs.com).
+This is the website of the swiss corrosion network [**Swisscorr**](https://swisscorr.ch). It is created using [gatsby](https://www.gatsbyjs.com).
 
 <p align="center">
   <a href="https://www.gatsbyjs.com">
@@ -16,16 +16,18 @@ This is the website of the swiss corrosion network **Swisscorr**. It is created 
 
 1.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Clone the directory, install the packages, and start the development environment. 
 
     ```shell
+    git clone https://github.com/thiloschmid/swisscorr.git
     cd swisscorr
+    npm install                                                                                  
     npm start
     ```
 
 1.  **Open the source code and start editing!**
 
-    Your site is now running at `http://localhost:8000`!
+    The site is now running at `http://localhost:8000`!
 
     _Note: You'll also see a second link: _`http://localhost:8000/___graphql`_. This is a tool you can use to experiment with querying your data. Learn more about using this tool in the [Gatsby tutorial](https://www.gatsbyjs.com/tutorial/part-five/#introducing-graphiql)._
 
