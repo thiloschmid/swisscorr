@@ -32,10 +32,9 @@ const Contact = () => {
         `}
         image={imageData}
       >
-        <Dialog
-          title={"Write us an email"}
-          text={`Contact information coming soon!`}
-        />
+        <Dialog title={"Write us an email"}>
+          <a href="mailto:info@swisscorr.ch">info@swisscorr.ch</a>
+        </Dialog>
       </BgImage>
     </Layout>
   )

@@ -8,14 +8,6 @@ import News from "../components/news"
 
 import SlideShowImage from "../components/slideshow-image"
 
-// import images
-
-const slideShowImages = [
-  "../images/slideshow/Background12.png",
-  "../images/slideshow/Background12.png",
-  "../images/slideshow/Background12.png",
-]
-
 const SlideShow = styled.div`
   display: flex;
   flex-flow: row nowrap;
@@ -28,7 +20,7 @@ const IndexPage = () => (
     <SEO />
     <h1>The Swiss Corrosion Network</h1>
     <SlideShow>
-    <SlideShowImage>
+      <SlideShowImage>
         <StaticImage
           src="../images/slideshow/bewaehrungsstahlkorrosion 2.jpg"
           height={300}

@@ -35,9 +35,8 @@ const About = () => {
           justify-content: flex-end;
         `}
       >
-        <Dialog
-          title={"Mission"}
-          text={[
+        <Dialog title={"Mission"}>
+          {[
             `The Swiss Corrosion Network ties together partners from industry 
           and scientific institutions to foster collaboration, knowledge 
           exchange and synergies. We promote corrosion education and courses. 
@@ -48,17 +47,21 @@ const About = () => {
           engineering, nuclear engineering and radioactive waste storage, oil 
           and gas, biomedical, geothermal energy, and additive manufacturing. 
           An annual national conference is organized, see `,
-            <Link key={"corrosion-day-link"} to="/corrosion-day">Swiss Corrosion Science Day</Link>,
+            <Link key={"corrosion-day-link"} to="/corrosion-day">
+              Swiss Corrosion Science Day
+            </Link>,
             ".",
           ]}
-        />
+        </Dialog>
       </BgImage>
       <h2>Organization</h2>
       <p>
         {[
           `The Swiss Corrosion Network is run by all its members, with an annual
       general assembly meeting. The Swiss Corrosion Network is endorsed by `,
-          <a key={"sgo-link"} href="https://www.sgo-sst.ch/home-de.html">SGO-SST</a>,
+          <a key={"sgo-link"} href="https://www.sgo-sst.ch/home-de.html">
+            SGO-SST
+          </a>,
           `.`,
         ]}
       </p>

@@ -16,13 +16,13 @@ const DialogBox = styled.div`
 
 interface DialogProps {
   title: string
-  text: any
+  children?: JSX.Element | (string | JSX.Element)[]
 }
 
-const Dialog = ({ title, text }: DialogProps) => (
+const Dialog = ({ title, children }: DialogProps) => (
   <DialogBox>
     <h3>{title}</h3>
-    {text}
+    {children}
   </DialogBox>
 )
 
