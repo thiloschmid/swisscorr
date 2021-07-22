@@ -12,6 +12,7 @@ import sgk from "../images/logos/sgk.png"
 import nagra from "../images/logos/nagra.png"
 import sika from "../images/logos/sika.png"
 import tfb from "../images/logos/tfb.png"
+import eta from "../images/logos/eta.svg"
 
 const SecondPage = () => (
   <Layout>
@@ -106,6 +107,16 @@ const SecondPage = () => (
         structures. Non-destructive testing. Potential mapping. Service life 
         modelling. Quality control of stainless steels. Corrosion protection.`}
       link={"https://www.tfb.ch/"}
+      comments="(Industry member)"
+    />
+    <MemberCard
+      institution={"ETA SA Manufacture Horlogère Suisse"}
+      logo={eta}
+      contact={"Rachel Partovi Nia"}
+      keywords={`Corrosion protection, Surface treatment, 
+        Functional / Decorative coating, Electrochemistry, Surface analysis, 
+        Coating evaluation`}
+      link={"https://www.eta.ch/"}
       comments="(Industry member)"
     />
   </Layout>
