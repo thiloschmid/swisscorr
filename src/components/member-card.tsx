@@ -26,22 +26,24 @@ const MemberBox = styled.div`
 
 const MemberLogoContainer = styled.div`
   display: flex;
+  flex-basis: 20%;
+  flex-shrink: 1;
   align-items: center;
   background-color: white;
   margin-right: 1rem;
   margin-bottom: 1rem;
   padding: 0.5rem;
   max-width: 11rem;
+  min-width: 6rem;
 `
 
 const MemberLogo = ({ link, logo }: any) => (
   <MemberLogoContainer>
-    <a href={link}>
+    <a href={link}
+      css={css`width: 100%;`}>
       <img
         src={logo}
         css={css`
-          flex-shrink: 1;
-          flex-basis: 20%;
           margin: 0;
         `}
       />
